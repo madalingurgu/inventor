@@ -70,13 +70,15 @@
             this.label16 = new System.Windows.Forms.Label();
             this.roundIndentControl1 = new InventorProject01.RoundIndentControl();
             this.obroundIndentControl1 = new InventorProject01.ObroundIndentControl();
+            this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
+            this.groupBox3.SuspendLayout();
             this.SuspendLayout();
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(12, 36);
+            this.textBox1.Location = new System.Drawing.Point(18, 36);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(78, 20);
             this.textBox1.TabIndex = 0;
@@ -391,7 +393,7 @@
             // label13
             // 
             this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(100, 20);
+            this.label13.Location = new System.Drawing.Point(117, 20);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(29, 13);
             this.label13.TabIndex = 5;
@@ -399,9 +401,9 @@
             // 
             // textBox6
             // 
-            this.textBox6.Location = new System.Drawing.Point(100, 36);
+            this.textBox6.Location = new System.Drawing.Point(119, 36);
             this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(270, 20);
+            this.textBox6.Size = new System.Drawing.Size(251, 20);
             this.textBox6.TabIndex = 4;
             // 
             // button1
@@ -448,7 +450,7 @@
             "Round",
             "Obround",
             "Rectangle"});
-            this.comboBox8.Location = new System.Drawing.Point(25, 302);
+            this.comboBox8.Location = new System.Drawing.Point(9, 32);
             this.comboBox8.Name = "comboBox8";
             this.comboBox8.Size = new System.Drawing.Size(119, 21);
             this.comboBox8.TabIndex = 12;
@@ -457,7 +459,7 @@
             // label16
             // 
             this.label16.AutoSize = true;
-            this.label16.Location = new System.Drawing.Point(22, 286);
+            this.label16.Location = new System.Drawing.Point(6, 16);
             this.label16.Name = "label16";
             this.label16.Size = new System.Drawing.Size(31, 13);
             this.label16.TabIndex = 11;
@@ -477,14 +479,24 @@
             this.obroundIndentControl1.Size = new System.Drawing.Size(243, 125);
             this.obroundIndentControl1.TabIndex = 13;
             // 
+            // groupBox3
+            // 
+            this.groupBox3.Controls.Add(this.label16);
+            this.groupBox3.Controls.Add(this.comboBox8);
+            this.groupBox3.Location = new System.Drawing.Point(15, 286);
+            this.groupBox3.Name = "groupBox3";
+            this.groupBox3.Size = new System.Drawing.Size(227, 111);
+            this.groupBox3.TabIndex = 14;
+            this.groupBox3.TabStop = false;
+            this.groupBox3.Text = "Indent";
+            // 
             // NewTray
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(584, 562);
+            this.ClientSize = new System.Drawing.Size(584, 561);
+            this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.obroundIndentControl1);
-            this.Controls.Add(this.comboBox8);
-            this.Controls.Add(this.label16);
             this.Controls.Add(this.roundIndentControl1);
             this.Controls.Add(this.button4);
             this.Controls.Add(this.button3);
@@ -506,6 +518,8 @@
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
+            this.groupBox3.ResumeLayout(false);
+            this.groupBox3.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -555,5 +569,6 @@
         private System.Windows.Forms.ComboBox comboBox8;
         private System.Windows.Forms.Label label16;
         private ObroundIndentControl obroundIndentControl1;
+        private System.Windows.Forms.GroupBox groupBox3;
     }
 }
