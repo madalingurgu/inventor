@@ -14,50 +14,17 @@ namespace InventorProject01
 {
     public partial class Main : Form
     {
-        Inventor.Application _invApp;
-        bool _started = false;
-
+        Form f = new NewTray();
         public Main()
         {
             InitializeComponent();
 
-            try
-            {
-                _invApp = (Inventor.Application)Marshal.GetActiveObject("Inventor.Application");
-
-            }
-            catch (Exception ex)
-            {
-                try
-                {
-                    Type invAppType = Type.GetTypeFromProgID("Inventor.Application");
-
-                    _invApp = (Inventor.Application)System.Activator.CreateInstance(invAppType);
-                    _invApp.Visible = true;
-
-                    //Note: if the Inventor session is left running after this
-                    //form is closed, there will still an be and Inventor.exe 
-                    //running. We will use this Boolean to test in Form1.Designer.cs 
-                    //in the dispose method whether or not the Inventor App should
-                    //be shut down when the form is closed.
-                    _started = true;
-
-                }
-                catch (Exception ex2)
-                {
-                    MessageBox.Show(ex2.ToString());
-                    MessageBox.Show("Unable to get or start Inventor");
-                }
-            }
         }
 
-        private void Main_FormClosed(object sender, FormClosedEventArgs e)
+        private void button1_Click(object sender, EventArgs e)
         {
-        if (_started == true)
-            {
-                _invApp.Quit();
-            }
-            _invApp = null;
+            f.Show();
         }
+
     }
 }
