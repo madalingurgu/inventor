@@ -17,9 +17,12 @@ namespace InventorProject01
         Inventor.Application _invApp;
         bool _started = false;
 
+
         public NewTray()
         {
             InitializeComponent();
+            roundIndentControl1.Hide();
+            obroundIndentControl1.Hide();
 
             try
             {
@@ -65,5 +68,26 @@ namespace InventorProject01
         {
             folderBrowserDialog1.ShowDialog();
         }
+
+        private void comboBox8_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (comboBox8.SelectedIndex == 0)
+            {
+                roundIndentControl1.Show();
+                obroundIndentControl1.Hide();
+            }
+            else if (comboBox8.SelectedIndex == 1)
+            {
+                obroundIndentControl1.Show();
+                roundIndentControl1.Hide();
+            }
+            else
+            {
+                roundIndentControl1.Hide();
+                obroundIndentControl1.Hide();
+            }
+        }
+
+
     }
 }
