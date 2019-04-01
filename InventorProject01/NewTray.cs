@@ -21,8 +21,10 @@ namespace InventorProject01
         public NewTray()
         {
             InitializeComponent();
+
             roundIndentControl1.Hide();
             obroundIndentControl1.Hide();
+            rectangleIndentControl1.Hide();
 
             try
             {
@@ -75,16 +77,25 @@ namespace InventorProject01
             {
                 roundIndentControl1.Show();
                 obroundIndentControl1.Hide();
+                rectangleIndentControl1.Hide();
             }
             else if (comboBox8.SelectedIndex == 1)
             {
                 obroundIndentControl1.Show();
                 roundIndentControl1.Hide();
+                rectangleIndentControl1.Hide();
+            }
+            else if (comboBox8.SelectedIndex == 2)
+            {
+                rectangleIndentControl1.Show();
+                roundIndentControl1.Hide();
+                obroundIndentControl1.Hide();
             }
             else
             {
                 roundIndentControl1.Hide();
                 obroundIndentControl1.Hide();
+                rectangleIndentControl1.Hide();
             }
         }
 
