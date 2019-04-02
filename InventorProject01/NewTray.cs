@@ -25,20 +25,19 @@ namespace InventorProject01
         bool _started = false;
 
 
-        public void PlaneVisibilityOff(PartDocument doc, WorkFeatureTypes featureTypes, Boolean visible)
+        public void PlaneVisibilityOff(PartDocument doc, WorkFeatureTypes FeatureType, Boolean visible)
         {
-            //switch (featureTypes)
-            //{
-                //case WorkFeatureTypes.Planes:
-                    //WorkPlanes workPlanes;
-                    //WorkPlane workPlane;
-                   // workPlanes = doc.ComponentDefinition.WorkPlanes;
-                    //foreach
-                    //{
-                     //   workPlane.Visible = Visible;
-                   // }
-                    //break;
-            //}
+            switch (FeatureType)
+            {
+                case (WorkFeatureTypes.Planes):
+                    WorkPlanes workPlanes;
+                    workPlanes = doc.ComponentDefinition.WorkPlanes;
+                    foreach (WorkPlane workPlane in workPlanes)
+                    {
+                        workPlane.Visible = visible;
+                    }
+                    break;
+            }
         }
 
         public NewTray()
@@ -89,12 +88,14 @@ namespace InventorProject01
             _invApp = null;
         }
 
+        //Folder Browser Button
         private void button1_Click(object sender, EventArgs e)
         {
             folderBrowserDialog1.ShowDialog();
             textBox6.Text = folderBrowserDialog1.SelectedPath.ToString();
         }
 
+        //Indent Type Combobox
         private void comboBox8_SelectedIndexChanged(object sender, EventArgs e)
         {
             if (comboBox8.SelectedIndex == 0)
@@ -123,19 +124,27 @@ namespace InventorProject01
             }
         }
 
+        //Save Button
         private void button3_Click(object sender, EventArgs e)
         {
             NewDoc();
+
+            PlaneVisibilityOff(oPartDoc, WorkFeatureTypes.Planes, false);
+
+            oPartDoc.Update();
+            _invApp.ActiveView.GoHome();
         }
 
         public void NewDoc()
         {
-            string choice, standard, inverted1, inverted2;
+            string home, work, choice, standard, inverted1, inverted2;
 
+            home = "C:/Users/MG/Desktop/temp/";
+            work = "C:/Users/gxmadalin/Desktop/tray template/";
             choice = "";
-            standard = "C:/Users/gxmadalin/Desktop/tray template/BBT # STD.ipt";
-            inverted1 = "C:/Users/gxmadalin/Desktop/tray template/BBT # INV 1.ipt";
-            inverted2 = "C:/Users/gxmadalin/Desktop/tray template/BBT # INV 2.ipt";
+            standard = home + "BBT # STD.ipt";
+            inverted1 = home + "BBT # INV 1.ipt";
+            inverted2 = home + "BBT # INV 2.ipt";
 
             if (comboBox1.SelectedIndex == 0)
             {
@@ -154,9 +163,16 @@ namespace InventorProject01
                 MessageBox.Show("No Tray Type Selected!");
                 return;
             }
-            MessageBox.Show(choice);
+            //Test String
+            //MessageBox.Show(choice);
 
             oPartDoc = (PartDocument)_invApp.Documents.Add(DocumentTypeEnum.kPartDocumentObject, choice);
+        }
+
+        //Cancel Button
+        private void button4_Click(object sender, EventArgs e)
+        {
+            
         }
     }
 }

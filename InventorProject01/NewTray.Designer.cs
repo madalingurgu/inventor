@@ -68,6 +68,8 @@
             this.comboBox8 = new System.Windows.Forms.ComboBox();
             this.label16 = new System.Windows.Forms.Label();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.rectangleIndentControl1 = new InventorProject01.RectangleIndentControl();
+            this.obroundIndentControl1 = new InventorProject01.ObroundIndentControl();
             this.groupBox7 = new System.Windows.Forms.GroupBox();
             this.label22 = new System.Windows.Forms.Label();
             this.textBox12 = new System.Windows.Forms.TextBox();
@@ -88,8 +90,6 @@
             this.radioButton1 = new System.Windows.Forms.RadioButton();
             this.label17 = new System.Windows.Forms.Label();
             this.textBox7 = new System.Windows.Forms.TextBox();
-            this.rectangleIndentControl1 = new InventorProject01.RectangleIndentControl();
-            this.obroundIndentControl1 = new InventorProject01.ObroundIndentControl();
             this.roundIndentControl1 = new InventorProject01.RoundIndentControl();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -467,6 +467,7 @@
             this.button4.TabIndex = 9;
             this.button4.Text = "Cancel";
             this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // comboBox8
             // 
@@ -510,6 +511,20 @@
             this.groupBox3.TabIndex = 14;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Indent";
+            // 
+            // rectangleIndentControl1
+            // 
+            this.rectangleIndentControl1.Location = new System.Drawing.Point(284, 19);
+            this.rectangleIndentControl1.Name = "rectangleIndentControl1";
+            this.rectangleIndentControl1.Size = new System.Drawing.Size(196, 227);
+            this.rectangleIndentControl1.TabIndex = 21;
+            // 
+            // obroundIndentControl1
+            // 
+            this.obroundIndentControl1.Location = new System.Drawing.Point(284, 20);
+            this.obroundIndentControl1.Name = "obroundIndentControl1";
+            this.obroundIndentControl1.Size = new System.Drawing.Size(188, 201);
+            this.obroundIndentControl1.TabIndex = 20;
             // 
             // groupBox7
             // 
@@ -695,20 +710,6 @@
             this.textBox7.Size = new System.Drawing.Size(86, 20);
             this.textBox7.TabIndex = 14;
             // 
-            // rectangleIndentControl1
-            // 
-            this.rectangleIndentControl1.Location = new System.Drawing.Point(284, 19);
-            this.rectangleIndentControl1.Name = "rectangleIndentControl1";
-            this.rectangleIndentControl1.Size = new System.Drawing.Size(196, 227);
-            this.rectangleIndentControl1.TabIndex = 21;
-            // 
-            // obroundIndentControl1
-            // 
-            this.obroundIndentControl1.Location = new System.Drawing.Point(284, 20);
-            this.obroundIndentControl1.Name = "obroundIndentControl1";
-            this.obroundIndentControl1.Size = new System.Drawing.Size(188, 201);
-            this.obroundIndentControl1.TabIndex = 20;
-            // 
             // roundIndentControl1
             // 
             this.roundIndentControl1.Location = new System.Drawing.Point(284, 19);
@@ -720,7 +721,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(584, 612);
+            this.ClientSize = new System.Drawing.Size(584, 611);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.button4);
             this.Controls.Add(this.button3);
