@@ -104,7 +104,7 @@
             // 
             this.textBox1.Location = new System.Drawing.Point(15, 60);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(78, 20);
+            this.textBox1.Size = new System.Drawing.Size(55, 20);
             this.textBox1.TabIndex = 0;
             // 
             // label1
@@ -417,7 +417,7 @@
             // label13
             // 
             this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(111, 44);
+            this.label13.Location = new System.Drawing.Point(78, 44);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(29, 13);
             this.label13.TabIndex = 5;
@@ -425,16 +425,16 @@
             // 
             // textBox6
             // 
-            this.textBox6.Location = new System.Drawing.Point(111, 60);
+            this.textBox6.Location = new System.Drawing.Point(78, 60);
             this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(251, 20);
+            this.textBox6.Size = new System.Drawing.Size(333, 20);
             this.textBox6.TabIndex = 4;
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(394, 59);
+            this.button1.Location = new System.Drawing.Point(417, 59);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 20);
+            this.button1.Size = new System.Drawing.Size(75, 21);
             this.button1.TabIndex = 6;
             this.button1.Text = "Browse";
             this.button1.UseVisualStyleBackColor = true;
@@ -442,7 +442,7 @@
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(495, 59);
+            this.button2.Location = new System.Drawing.Point(495, 60);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(75, 20);
             this.button2.TabIndex = 7;
@@ -457,6 +457,7 @@
             this.button3.TabIndex = 8;
             this.button3.Text = "Save";
             this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // button4
             // 
@@ -698,7 +699,7 @@
             // 
             this.rectangleIndentControl1.Location = new System.Drawing.Point(284, 19);
             this.rectangleIndentControl1.Name = "rectangleIndentControl1";
-            this.rectangleIndentControl1.Size = new System.Drawing.Size(190, 227);
+            this.rectangleIndentControl1.Size = new System.Drawing.Size(196, 227);
             this.rectangleIndentControl1.TabIndex = 21;
             // 
             // obroundIndentControl1
@@ -719,7 +720,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(584, 611);
+            this.ClientSize = new System.Drawing.Size(584, 612);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.button4);
             this.Controls.Add(this.button3);

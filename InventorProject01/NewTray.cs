@@ -10,13 +10,36 @@ using System.Windows.Forms;
 using System.Runtime.InteropServices;
 using Inventor;
 
+public enum WorkFeatureTypes
+{
+    Planes, Axes, Points
+}
+
 namespace InventorProject01
 {
     public partial class NewTray : Form
     {
         Inventor.Application _invApp;
+        PartDocument oPartDoc;
+
         bool _started = false;
 
+
+        public void PlaneVisibilityOff(PartDocument doc, WorkFeatureTypes featureTypes, Boolean visible)
+        {
+            //switch (featureTypes)
+            //{
+                //case WorkFeatureTypes.Planes:
+                    //WorkPlanes workPlanes;
+                    //WorkPlane workPlane;
+                   // workPlanes = doc.ComponentDefinition.WorkPlanes;
+                    //foreach
+                    //{
+                     //   workPlane.Visible = Visible;
+                   // }
+                    //break;
+            //}
+        }
 
         public NewTray()
         {
@@ -69,6 +92,7 @@ namespace InventorProject01
         private void button1_Click(object sender, EventArgs e)
         {
             folderBrowserDialog1.ShowDialog();
+            textBox6.Text = folderBrowserDialog1.SelectedPath.ToString();
         }
 
         private void comboBox8_SelectedIndexChanged(object sender, EventArgs e)
@@ -99,6 +123,40 @@ namespace InventorProject01
             }
         }
 
+        private void button3_Click(object sender, EventArgs e)
+        {
+            NewDoc();
+        }
 
+        public void NewDoc()
+        {
+            string choice, standard, inverted1, inverted2;
+
+            choice = "";
+            standard = "C:/Users/gxmadalin/Desktop/tray template/BBT # STD.ipt";
+            inverted1 = "C:/Users/gxmadalin/Desktop/tray template/BBT # INV 1.ipt";
+            inverted2 = "C:/Users/gxmadalin/Desktop/tray template/BBT # INV 2.ipt";
+
+            if (comboBox1.SelectedIndex == 0)
+            {
+                choice = standard;
+            }
+            else if (comboBox1.SelectedIndex == 1)
+            {
+                choice = inverted1;
+            }
+            else if (comboBox1.SelectedIndex == 2)
+            {
+                choice = inverted2;
+            }
+            else
+            {
+                MessageBox.Show("No Tray Type Selected!");
+                return;
+            }
+            MessageBox.Show(choice);
+
+            oPartDoc = (PartDocument)_invApp.Documents.Add(DocumentTypeEnum.kPartDocumentObject, choice);
+        }
     }
 }
