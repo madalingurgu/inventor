@@ -21,6 +21,7 @@ namespace InventorProject01
     {
         Inventor.Application _invApp;
         PartDocument oPartDoc;
+        PartComponentDefinition oCompDef;
 
         bool _started = false;
 
@@ -88,6 +89,81 @@ namespace InventorProject01
             _invApp = null;
         }
 
+        public void NewDoc()
+        {
+            string home, work, choice, standard, inverted1, inverted2;
+
+            home = "C:/Users/MG/Desktop/temp/";
+            work = "C:/Users/gxmadalin/Desktop/tray template/";
+            choice = "";
+            standard = work + "BBT # STD.ipt";
+            inverted1 = work + "BBT # INV 1.ipt";
+            inverted2 = work + "BBT # INV 2.ipt";
+
+            if (comboBox1.SelectedIndex == 0)
+            {
+                choice = standard;
+            }
+            else if (comboBox1.SelectedIndex == 1)
+            {
+                choice = inverted1;
+            }
+            else if (comboBox1.SelectedIndex == 2)
+            {
+                choice = inverted2;
+            }
+            else
+            {
+                MessageBox.Show("No Tray Type Selected!");
+                return;
+            }
+            //Test String
+            //MessageBox.Show(choice);
+
+            oPartDoc = (PartDocument)_invApp.Documents.Add(DocumentTypeEnum.kPartDocumentObject, choice);
+        }
+
+        public void TrayParameters()
+        {
+            oCompDef = oPartDoc.ComponentDefinition;
+            Parameters oParameters = oCompDef.Parameters;
+            //textBox2.Text = oParameters["TLUN"].Expression;
+            try
+            {
+                oParameters["TLUN"].Expression = textBox2.Text;
+                oParameters["TLAT"].Expression = textBox3.Text;
+                oParameters["TH0"].Expression = comboBox5.Text;
+                oParameters["TGM"].Expression = comboBox3.Text;
+
+                if (comboBox5.SelectedIndex == 0)
+                {
+                    oParameters["TRC"].Expression = "16";
+                }
+                else if (comboBox5.SelectedIndex == 1)
+                {
+                    oParameters["TRC"].Expression = "43.6";
+                }
+                else if (comboBox5.SelectedIndex == 2)
+                {
+                    oParameters["TRC"].Expression = "69";
+                }
+                else
+                {
+                    //oParameters["TRC"].Expression = "43.6";
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Missing Parameter!");
+                //MessageBox.Show(ex.ToString());
+            }
+        }
+
+        public void ObroundIndent()
+        {
+
+        }
+
         //Folder Browser Button
         private void button1_Click(object sender, EventArgs e)
         {
@@ -127,7 +203,15 @@ namespace InventorProject01
         //Save Button
         private void button3_Click(object sender, EventArgs e)
         {
+
+        }
+
+        //Preview Button
+        private void button5_Click(object sender, EventArgs e)
+        {
             NewDoc();
+
+            TrayParameters();
 
             PlaneVisibilityOff(oPartDoc, WorkFeatureTypes.Planes, false);
 
@@ -135,44 +219,23 @@ namespace InventorProject01
             _invApp.ActiveView.GoHome();
         }
 
-        public void NewDoc()
-        {
-            string home, work, choice, standard, inverted1, inverted2;
-
-            home = "C:/Users/MG/Desktop/temp/";
-            work = "C:/Users/gxmadalin/Desktop/tray template/";
-            choice = "";
-            standard = home + "BBT # STD.ipt";
-            inverted1 = home + "BBT # INV 1.ipt";
-            inverted2 = home + "BBT # INV 2.ipt";
-
-            if (comboBox1.SelectedIndex == 0)
-            {
-                choice = standard;
-            }
-            else if (comboBox1.SelectedIndex == 1)
-            {
-                choice = inverted1;
-            }
-            else if (comboBox1.SelectedIndex == 2)
-            {
-                choice = inverted2;
-            }
-            else
-            {
-                MessageBox.Show("No Tray Type Selected!");
-                return;
-            }
-            //Test String
-            //MessageBox.Show(choice);
-
-            oPartDoc = (PartDocument)_invApp.Documents.Add(DocumentTypeEnum.kPartDocumentObject, choice);
-        }
-
         //Cancel Button
         private void button4_Click(object sender, EventArgs e)
         {
             
+        }
+
+        private void textBox2_Leave(object sender, EventArgs e)
+        {
+            //MessageBox.Show("Leave");
+            //textBox2.ForeColor = System.Drawing.Color.Brown;
+            //textBox2.Text = "*Required";
+            if (textBox2.Text == null)
+            {
+                label8.ForeColor = System.Drawing.Color.Brown;
+                label8.Name = "*Length Required";
+            }
+
         }
     }
 }

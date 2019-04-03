@@ -91,6 +91,7 @@
             this.label17 = new System.Windows.Forms.Label();
             this.textBox7 = new System.Windows.Forms.TextBox();
             this.roundIndentControl1 = new InventorProject01.RoundIndentControl();
+            this.button5 = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -152,6 +153,7 @@
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(85, 20);
             this.textBox2.TabIndex = 13;
+            this.textBox2.Leave += new System.EventHandler(this.textBox2_Leave);
             // 
             // label7
             // 
@@ -451,7 +453,7 @@
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(10, 576);
+            this.button3.Location = new System.Drawing.Point(91, 577);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(75, 23);
             this.button3.TabIndex = 8;
@@ -461,7 +463,7 @@
             // 
             // button4
             // 
-            this.button4.Location = new System.Drawing.Point(98, 576);
+            this.button4.Location = new System.Drawing.Point(172, 577);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(75, 23);
             this.button4.TabIndex = 9;
@@ -717,11 +719,22 @@
             this.roundIndentControl1.Size = new System.Drawing.Size(152, 74);
             this.roundIndentControl1.TabIndex = 13;
             // 
+            // button5
+            // 
+            this.button5.Location = new System.Drawing.Point(10, 577);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(75, 23);
+            this.button5.TabIndex = 15;
+            this.button5.Text = "Preview";
+            this.button5.UseVisualStyleBackColor = true;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
+            // 
             // NewTray
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(584, 611);
+            this.ClientSize = new System.Drawing.Size(584, 612);
+            this.Controls.Add(this.button5);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.button4);
             this.Controls.Add(this.button3);
@@ -823,5 +836,6 @@
         private System.Windows.Forms.TextBox textBox11;
         private ObroundIndentControl obroundIndentControl1;
         private RectangleIndentControl rectangleIndentControl1;
+        private System.Windows.Forms.Button button5;
     }
 }
