@@ -31,10 +31,10 @@
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.trayWidth_textBox = new System.Windows.Forms.TextBox();
+            this.trayLength_textBox = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
+            this.trayLength_label = new System.Windows.Forms.Label();
             this.comboBox5 = new System.Windows.Forms.ComboBox();
             this.label6 = new System.Windows.Forms.Label();
             this.comboBox4 = new System.Windows.Forms.ComboBox();
@@ -68,8 +68,6 @@
             this.comboBox8 = new System.Windows.Forms.ComboBox();
             this.label16 = new System.Windows.Forms.Label();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.rectangleIndentControl1 = new InventorProject01.RectangleIndentControl();
-            this.obroundIndentControl1 = new InventorProject01.ObroundIndentControl();
             this.groupBox7 = new System.Windows.Forms.GroupBox();
             this.label22 = new System.Windows.Forms.Label();
             this.textBox12 = new System.Windows.Forms.TextBox();
@@ -90,8 +88,10 @@
             this.radioButton1 = new System.Windows.Forms.RadioButton();
             this.label17 = new System.Windows.Forms.Label();
             this.textBox7 = new System.Windows.Forms.TextBox();
+            this.preview_button = new System.Windows.Forms.Button();
+            this.rectangleIndentControl1 = new InventorProject01.RectangleIndentControl();
+            this.obroundIndentControl1 = new InventorProject01.ObroundIndentControl();
             this.roundIndentControl1 = new InventorProject01.RoundIndentControl();
-            this.button5 = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -119,10 +119,10 @@
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.textBox3);
-            this.groupBox1.Controls.Add(this.textBox2);
+            this.groupBox1.Controls.Add(this.trayWidth_textBox);
+            this.groupBox1.Controls.Add(this.trayLength_textBox);
             this.groupBox1.Controls.Add(this.label7);
-            this.groupBox1.Controls.Add(this.label8);
+            this.groupBox1.Controls.Add(this.trayLength_label);
             this.groupBox1.Controls.Add(this.comboBox5);
             this.groupBox1.Controls.Add(this.label6);
             this.groupBox1.Controls.Add(this.comboBox4);
@@ -142,18 +142,18 @@
             // 
             // textBox3
             // 
-            this.textBox3.Location = new System.Drawing.Point(97, 143);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(86, 20);
-            this.textBox3.TabIndex = 14;
+            this.trayWidth_textBox.Location = new System.Drawing.Point(97, 143);
+            this.trayWidth_textBox.Name = "textBox3";
+            this.trayWidth_textBox.Size = new System.Drawing.Size(86, 20);
+            this.trayWidth_textBox.TabIndex = 14;
             // 
-            // textBox2
+            // trayLength_textBox
             // 
-            this.textBox2.Location = new System.Drawing.Point(6, 143);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(85, 20);
-            this.textBox2.TabIndex = 13;
-            this.textBox2.Leave += new System.EventHandler(this.textBox2_Leave);
+            this.trayLength_textBox.Location = new System.Drawing.Point(6, 143);
+            this.trayLength_textBox.Name = "trayLength_textBox";
+            this.trayLength_textBox.Size = new System.Drawing.Size(85, 20);
+            this.trayLength_textBox.TabIndex = 13;
+            this.trayLength_textBox.Leave += new System.EventHandler(this.trayLength_textBox_Leave);
             // 
             // label7
             // 
@@ -164,14 +164,14 @@
             this.label7.TabIndex = 12;
             this.label7.Text = "Width";
             // 
-            // label8
+            // trayLength_label
             // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(6, 127);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(40, 13);
-            this.label8.TabIndex = 10;
-            this.label8.Text = "Length";
+            this.trayLength_label.AutoSize = true;
+            this.trayLength_label.Location = new System.Drawing.Point(6, 127);
+            this.trayLength_label.Name = "trayLength_label";
+            this.trayLength_label.Size = new System.Drawing.Size(40, 13);
+            this.trayLength_label.TabIndex = 10;
+            this.trayLength_label.Text = "Length";
             // 
             // comboBox5
             // 
@@ -459,7 +459,7 @@
             this.button3.TabIndex = 8;
             this.button3.Text = "Save";
             this.button3.UseVisualStyleBackColor = true;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
+            this.button3.Click += new System.EventHandler(this.save_button_Click);
             // 
             // button4
             // 
@@ -469,7 +469,7 @@
             this.button4.TabIndex = 9;
             this.button4.Text = "Cancel";
             this.button4.UseVisualStyleBackColor = true;
-            this.button4.Click += new System.EventHandler(this.button4_Click);
+            this.button4.Click += new System.EventHandler(this.cancel_button_Click);
             // 
             // comboBox8
             // 
@@ -513,20 +513,6 @@
             this.groupBox3.TabIndex = 14;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Indent";
-            // 
-            // rectangleIndentControl1
-            // 
-            this.rectangleIndentControl1.Location = new System.Drawing.Point(284, 19);
-            this.rectangleIndentControl1.Name = "rectangleIndentControl1";
-            this.rectangleIndentControl1.Size = new System.Drawing.Size(196, 227);
-            this.rectangleIndentControl1.TabIndex = 21;
-            // 
-            // obroundIndentControl1
-            // 
-            this.obroundIndentControl1.Location = new System.Drawing.Point(284, 20);
-            this.obroundIndentControl1.Name = "obroundIndentControl1";
-            this.obroundIndentControl1.Size = new System.Drawing.Size(188, 201);
-            this.obroundIndentControl1.TabIndex = 20;
             // 
             // groupBox7
             // 
@@ -712,6 +698,30 @@
             this.textBox7.Size = new System.Drawing.Size(86, 20);
             this.textBox7.TabIndex = 14;
             // 
+            // preview_button
+            // 
+            this.preview_button.Location = new System.Drawing.Point(10, 577);
+            this.preview_button.Name = "preview_button";
+            this.preview_button.Size = new System.Drawing.Size(75, 23);
+            this.preview_button.TabIndex = 15;
+            this.preview_button.Text = "Preview";
+            this.preview_button.UseVisualStyleBackColor = true;
+            this.preview_button.Click += new System.EventHandler(this.preview_button_Click);
+            // 
+            // rectangleIndentControl1
+            // 
+            this.rectangleIndentControl1.Location = new System.Drawing.Point(284, 19);
+            this.rectangleIndentControl1.Name = "rectangleIndentControl1";
+            this.rectangleIndentControl1.Size = new System.Drawing.Size(196, 227);
+            this.rectangleIndentControl1.TabIndex = 21;
+            // 
+            // obroundIndentControl1
+            // 
+            this.obroundIndentControl1.Location = new System.Drawing.Point(284, 20);
+            this.obroundIndentControl1.Name = "obroundIndentControl1";
+            this.obroundIndentControl1.Size = new System.Drawing.Size(188, 201);
+            this.obroundIndentControl1.TabIndex = 20;
+            // 
             // roundIndentControl1
             // 
             this.roundIndentControl1.Location = new System.Drawing.Point(284, 19);
@@ -719,22 +729,12 @@
             this.roundIndentControl1.Size = new System.Drawing.Size(152, 74);
             this.roundIndentControl1.TabIndex = 13;
             // 
-            // button5
-            // 
-            this.button5.Location = new System.Drawing.Point(10, 577);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(75, 23);
-            this.button5.TabIndex = 15;
-            this.button5.Text = "Preview";
-            this.button5.UseVisualStyleBackColor = true;
-            this.button5.Click += new System.EventHandler(this.button5_Click);
-            // 
             // NewTray
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(584, 612);
-            this.Controls.Add(this.button5);
+            this.Controls.Add(this.preview_button);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.button4);
             this.Controls.Add(this.button3);
@@ -782,10 +782,10 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.ComboBox comboBox2;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox trayWidth_textBox;
+        private System.Windows.Forms.TextBox trayLength_textBox;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label trayLength_label;
         private System.Windows.Forms.ComboBox comboBox5;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.ComboBox comboBox4;
@@ -836,6 +836,6 @@
         private System.Windows.Forms.TextBox textBox11;
         private ObroundIndentControl obroundIndentControl1;
         private RectangleIndentControl rectangleIndentControl1;
-        private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.Button preview_button;
     }
 }
