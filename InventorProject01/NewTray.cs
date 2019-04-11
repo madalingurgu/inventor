@@ -25,6 +25,8 @@ namespace InventorProject01
 
         bool _started = false;
 
+       
+
         public void PlaneVisibilityOff(PartDocument doc, WorkFeatureTypes FeatureType, Boolean visible)
         {
             switch (FeatureType)
@@ -44,11 +46,14 @@ namespace InventorProject01
         {
             InitializeComponent();
 
+            trayLength_numericUpDown.Text = "";
+            trayWidth_numericUpDown.Text = "";
+
             roundIndentControl1.Hide();
             obroundIndentControl1.Hide();
             rectangleIndentControl1.Hide();
             preview_button.Enabled = false;
-            button3.Enabled = false;
+            save_button.Enabled = false;
 
             try
             {
@@ -131,20 +136,20 @@ namespace InventorProject01
             //textBox2.Text = oParameters["TLUN"].Expression;
             try
             {
-                oParameters["TLUN"].Expression = trayLength_textBox.Text;
-                oParameters["TLAT"].Expression = trayWidth_textBox.Text;
-                oParameters["TH0"].Expression = comboBox5.Text;
-                oParameters["TGM"].Expression = comboBox3.Text;
+                oParameters["TLUN"].Expression = trayLength_numericUpDown.Text;
+                oParameters["TLAT"].Expression = trayWidth_numericUpDown.Text;
+                oParameters["TH0"].Expression = trayHeight_comboBox.Text;
+                oParameters["TGM"].Expression = trayThickness_comboBox.Text;
 
-                if (comboBox5.SelectedIndex == 0)
+                if (trayCorner_comboBox.SelectedIndex == 0)
                 {
                     oParameters["TRC"].Expression = "16";
                 }
-                else if (comboBox5.SelectedIndex == 1)
+                else if (trayCorner_comboBox.SelectedIndex == 1)
                 {
                     oParameters["TRC"].Expression = "43.6";
                 }
-                else if (comboBox5.SelectedIndex == 2)
+                else if (trayCorner_comboBox.SelectedIndex == 2)
                 {
                     oParameters["TRC"].Expression = "69";
                 }
@@ -223,38 +228,12 @@ namespace InventorProject01
         //Cancel Button
         private void cancel_button_Click(object sender, EventArgs e)
         {
-            TrayValidator();
-        }
-
-        private void trayLength_textBox_Leave(object sender, EventArgs e)
-        {
-            TrayValidator();
-            if (trayLength_textBox.Text == string.Empty)
-            {
-                trayLength_label.ForeColor = System.Drawing.Color.Brown;
-            }
-            else
-            {
-                trayLength_label.ForeColor = System.Drawing.Color.Black;
-            }
+            
         }
 
         public void TrayValidator()
         {
-            if (trayLength_textBox.Text == string.Empty &&
-                trayWidth_textBox.Text == string.Empty)
-            {
 
-                MessageBox.Show("NOT VALID!");
-                preview_button.Enabled = false;
-                button3.Enabled = false;
-            }
-            else
-            {
-                preview_button.Enabled = true;
-                button3.Enabled = true;
-            }
         }
-
     }
 }

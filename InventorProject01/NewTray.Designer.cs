@@ -31,16 +31,16 @@
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.trayWidth_textBox = new System.Windows.Forms.TextBox();
-            this.trayLength_textBox = new System.Windows.Forms.TextBox();
+            this.trayWidth_numericUpDown = new System.Windows.Forms.NumericUpDown();
+            this.trayLength_numericUpDown = new System.Windows.Forms.NumericUpDown();
             this.label7 = new System.Windows.Forms.Label();
             this.trayLength_label = new System.Windows.Forms.Label();
-            this.comboBox5 = new System.Windows.Forms.ComboBox();
+            this.trayHeight_comboBox = new System.Windows.Forms.ComboBox();
             this.label6 = new System.Windows.Forms.Label();
-            this.comboBox4 = new System.Windows.Forms.ComboBox();
+            this.trayCorner_comboBox = new System.Windows.Forms.ComboBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.comboBox3 = new System.Windows.Forms.ComboBox();
+            this.trayThickness_comboBox = new System.Windows.Forms.ComboBox();
             this.comboBox2 = new System.Windows.Forms.ComboBox();
             this.label3 = new System.Windows.Forms.Label();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
@@ -50,8 +50,6 @@
             this.label10 = new System.Windows.Forms.Label();
             this.textBox4 = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
-            this.comboBox6 = new System.Windows.Forms.ComboBox();
-            this.label11 = new System.Windows.Forms.Label();
             this.comboBox7 = new System.Windows.Forms.ComboBox();
             this.label12 = new System.Windows.Forms.Label();
             this.comboBox9 = new System.Windows.Forms.ComboBox();
@@ -62,7 +60,7 @@
             this.textBox6 = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
+            this.save_button = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
             this.folderBrowserDialog1 = new System.Windows.Forms.FolderBrowserDialog();
             this.comboBox8 = new System.Windows.Forms.ComboBox();
@@ -93,6 +91,8 @@
             this.obroundIndentControl1 = new InventorProject01.ObroundIndentControl();
             this.roundIndentControl1 = new InventorProject01.RoundIndentControl();
             this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.trayWidth_numericUpDown)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.trayLength_numericUpDown)).BeginInit();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
             this.groupBox7.SuspendLayout();
@@ -119,20 +119,21 @@
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.trayWidth_textBox);
-            this.groupBox1.Controls.Add(this.trayLength_textBox);
+            this.groupBox1.Controls.Add(this.trayWidth_numericUpDown);
+            this.groupBox1.Controls.Add(this.trayLength_numericUpDown);
             this.groupBox1.Controls.Add(this.label7);
             this.groupBox1.Controls.Add(this.trayLength_label);
-            this.groupBox1.Controls.Add(this.comboBox5);
+            this.groupBox1.Controls.Add(this.trayHeight_comboBox);
             this.groupBox1.Controls.Add(this.label6);
-            this.groupBox1.Controls.Add(this.comboBox4);
+            this.groupBox1.Controls.Add(this.trayCorner_comboBox);
             this.groupBox1.Controls.Add(this.label4);
             this.groupBox1.Controls.Add(this.label5);
-            this.groupBox1.Controls.Add(this.comboBox3);
+            this.groupBox1.Controls.Add(this.trayThickness_comboBox);
             this.groupBox1.Controls.Add(this.comboBox2);
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.comboBox1);
             this.groupBox1.Controls.Add(this.label2);
+            this.groupBox1.ForeColor = System.Drawing.SystemColors.ControlText;
             this.groupBox1.Location = new System.Drawing.Point(10, 100);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(280, 175);
@@ -140,20 +141,51 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Tray Configuration";
             // 
-            // textBox3
+            // trayWidth_numericUpDown
             // 
-            this.trayWidth_textBox.Location = new System.Drawing.Point(97, 143);
-            this.trayWidth_textBox.Name = "textBox3";
-            this.trayWidth_textBox.Size = new System.Drawing.Size(86, 20);
-            this.trayWidth_textBox.TabIndex = 14;
+            this.trayWidth_numericUpDown.DecimalPlaces = 2;
+            this.trayWidth_numericUpDown.Location = new System.Drawing.Point(97, 142);
+            this.trayWidth_numericUpDown.Maximum = new decimal(new int[] {
+            1500,
+            0,
+            0,
+            0});
+            this.trayWidth_numericUpDown.Minimum = new decimal(new int[] {
+            350,
+            0,
+            0,
+            0});
+            this.trayWidth_numericUpDown.Name = "trayWidth_numericUpDown";
+            this.trayWidth_numericUpDown.Size = new System.Drawing.Size(85, 20);
+            this.trayWidth_numericUpDown.TabIndex = 17;
+            this.trayWidth_numericUpDown.Value = new decimal(new int[] {
+            600,
+            0,
+            0,
+            0});
             // 
-            // trayLength_textBox
+            // trayLength_numericUpDown
             // 
-            this.trayLength_textBox.Location = new System.Drawing.Point(6, 143);
-            this.trayLength_textBox.Name = "trayLength_textBox";
-            this.trayLength_textBox.Size = new System.Drawing.Size(85, 20);
-            this.trayLength_textBox.TabIndex = 13;
-            this.trayLength_textBox.Leave += new System.EventHandler(this.trayLength_textBox_Leave);
+            this.trayLength_numericUpDown.DecimalPlaces = 2;
+            this.trayLength_numericUpDown.Location = new System.Drawing.Point(5, 142);
+            this.trayLength_numericUpDown.Maximum = new decimal(new int[] {
+            1500,
+            0,
+            0,
+            0});
+            this.trayLength_numericUpDown.Minimum = new decimal(new int[] {
+            350,
+            0,
+            0,
+            0});
+            this.trayLength_numericUpDown.Name = "trayLength_numericUpDown";
+            this.trayLength_numericUpDown.Size = new System.Drawing.Size(85, 20);
+            this.trayLength_numericUpDown.TabIndex = 16;
+            this.trayLength_numericUpDown.Value = new decimal(new int[] {
+            800,
+            0,
+            0,
+            0});
             // 
             // label7
             // 
@@ -173,18 +205,19 @@
             this.trayLength_label.TabIndex = 10;
             this.trayLength_label.Text = "Length";
             // 
-            // comboBox5
+            // trayHeight_comboBox
             // 
-            this.comboBox5.FormattingEnabled = true;
-            this.comboBox5.Items.AddRange(new object[] {
+            this.trayHeight_comboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.trayHeight_comboBox.FormattingEnabled = true;
+            this.trayHeight_comboBox.Items.AddRange(new object[] {
             "25.4",
             "26.8",
             "27.8",
             "28.6"});
-            this.comboBox5.Location = new System.Drawing.Point(189, 142);
-            this.comboBox5.Name = "comboBox5";
-            this.comboBox5.Size = new System.Drawing.Size(85, 21);
-            this.comboBox5.TabIndex = 9;
+            this.trayHeight_comboBox.Location = new System.Drawing.Point(189, 142);
+            this.trayHeight_comboBox.Name = "trayHeight_comboBox";
+            this.trayHeight_comboBox.Size = new System.Drawing.Size(85, 21);
+            this.trayHeight_comboBox.TabIndex = 9;
             // 
             // label6
             // 
@@ -195,22 +228,23 @@
             this.label6.TabIndex = 8;
             this.label6.Text = "Height";
             // 
-            // comboBox4
+            // trayCorner_comboBox
             // 
-            this.comboBox4.FormattingEnabled = true;
-            this.comboBox4.Items.AddRange(new object[] {
+            this.trayCorner_comboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.trayCorner_comboBox.FormattingEnabled = true;
+            this.trayCorner_comboBox.Items.AddRange(new object[] {
             "1 inch",
             "2 inch",
             "3 inch"});
-            this.comboBox4.Location = new System.Drawing.Point(6, 93);
-            this.comboBox4.Name = "comboBox4";
-            this.comboBox4.Size = new System.Drawing.Size(132, 21);
-            this.comboBox4.TabIndex = 7;
+            this.trayCorner_comboBox.Location = new System.Drawing.Point(6, 93);
+            this.trayCorner_comboBox.Name = "trayCorner_comboBox";
+            this.trayCorner_comboBox.Size = new System.Drawing.Size(132, 21);
+            this.trayCorner_comboBox.TabIndex = 7;
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(140, 29);
+            this.label4.Location = new System.Drawing.Point(139, 77);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(56, 13);
             this.label4.TabIndex = 4;
@@ -225,26 +259,28 @@
             this.label5.TabIndex = 6;
             this.label5.Text = "Corner";
             // 
-            // comboBox3
+            // trayThickness_comboBox
             // 
-            this.comboBox3.FormattingEnabled = true;
-            this.comboBox3.Items.AddRange(new object[] {
+            this.trayThickness_comboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.trayThickness_comboBox.FormattingEnabled = true;
+            this.trayThickness_comboBox.Items.AddRange(new object[] {
             "0.6",
             "0.8",
             "0.9",
             "1.0"});
-            this.comboBox3.Location = new System.Drawing.Point(143, 45);
-            this.comboBox3.Name = "comboBox3";
-            this.comboBox3.Size = new System.Drawing.Size(131, 21);
-            this.comboBox3.TabIndex = 5;
+            this.trayThickness_comboBox.Location = new System.Drawing.Point(142, 93);
+            this.trayThickness_comboBox.Name = "trayThickness_comboBox";
+            this.trayThickness_comboBox.Size = new System.Drawing.Size(131, 21);
+            this.trayThickness_comboBox.TabIndex = 5;
             // 
             // comboBox2
             // 
+            this.comboBox2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBox2.FormattingEnabled = true;
             this.comboBox2.Items.AddRange(new object[] {
             "Alusteel",
             "Stainless Steel"});
-            this.comboBox2.Location = new System.Drawing.Point(143, 93);
+            this.comboBox2.Location = new System.Drawing.Point(142, 45);
             this.comboBox2.Name = "comboBox2";
             this.comboBox2.Size = new System.Drawing.Size(131, 21);
             this.comboBox2.TabIndex = 3;
@@ -252,7 +288,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(140, 77);
+            this.label3.Location = new System.Drawing.Point(139, 29);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(44, 13);
             this.label3.TabIndex = 2;
@@ -260,6 +296,7 @@
             // 
             // comboBox1
             // 
+            this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBox1.FormattingEnabled = true;
             this.comboBox1.Items.AddRange(new object[] {
             "Standard",
@@ -285,8 +322,6 @@
             this.groupBox2.Controls.Add(this.label10);
             this.groupBox2.Controls.Add(this.textBox4);
             this.groupBox2.Controls.Add(this.label9);
-            this.groupBox2.Controls.Add(this.comboBox6);
-            this.groupBox2.Controls.Add(this.label11);
             this.groupBox2.Controls.Add(this.comboBox7);
             this.groupBox2.Controls.Add(this.label12);
             this.groupBox2.Controls.Add(this.comboBox9);
@@ -334,36 +369,18 @@
             this.label9.TabIndex = 10;
             this.label9.Text = "Estimate Length";
             // 
-            // comboBox6
-            // 
-            this.comboBox6.FormattingEnabled = true;
-            this.comboBox6.Items.AddRange(new object[] {
-            "3.8",
-            "4.8"});
-            this.comboBox6.Location = new System.Drawing.Point(143, 93);
-            this.comboBox6.Name = "comboBox6";
-            this.comboBox6.Size = new System.Drawing.Size(131, 21);
-            this.comboBox6.TabIndex = 9;
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(140, 77);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(56, 13);
-            this.label11.TabIndex = 8;
-            this.label11.Text = "Thickness";
-            // 
             // comboBox7
             // 
+            this.comboBox7.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBox7.FormattingEnabled = true;
             this.comboBox7.Items.AddRange(new object[] {
-            "12.7",
-            "14.4",
-            "15.9"});
+            "16 X 5",
+            "16 X 4",
+            "15 X 5",
+            "12.7 X 5"});
             this.comboBox7.Location = new System.Drawing.Point(9, 93);
             this.comboBox7.Name = "comboBox7";
-            this.comboBox7.Size = new System.Drawing.Size(128, 21);
+            this.comboBox7.Size = new System.Drawing.Size(265, 21);
             this.comboBox7.TabIndex = 7;
             // 
             // label12
@@ -371,12 +388,13 @@
             this.label12.AutoSize = true;
             this.label12.Location = new System.Drawing.Point(6, 77);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(38, 13);
+            this.label12.Size = new System.Drawing.Size(61, 13);
             this.label12.TabIndex = 6;
-            this.label12.Text = "Height";
+            this.label12.Text = "Dimensions";
             // 
             // comboBox9
             // 
+            this.comboBox9.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBox9.FormattingEnabled = true;
             this.comboBox9.Items.AddRange(new object[] {
             "Alusteel",
@@ -398,6 +416,7 @@
             // 
             // comboBox10
             // 
+            this.comboBox10.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBox10.FormattingEnabled = true;
             this.comboBox10.Items.AddRange(new object[] {
             "Solid",
@@ -451,15 +470,15 @@
             this.button2.Text = "Auto";
             this.button2.UseVisualStyleBackColor = true;
             // 
-            // button3
+            // save_button
             // 
-            this.button3.Location = new System.Drawing.Point(91, 577);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(75, 23);
-            this.button3.TabIndex = 8;
-            this.button3.Text = "Save";
-            this.button3.UseVisualStyleBackColor = true;
-            this.button3.Click += new System.EventHandler(this.save_button_Click);
+            this.save_button.Location = new System.Drawing.Point(91, 577);
+            this.save_button.Name = "save_button";
+            this.save_button.Size = new System.Drawing.Size(75, 23);
+            this.save_button.TabIndex = 8;
+            this.save_button.Text = "Save";
+            this.save_button.UseVisualStyleBackColor = true;
+            this.save_button.Click += new System.EventHandler(this.save_button_Click);
             // 
             // button4
             // 
@@ -737,7 +756,7 @@
             this.Controls.Add(this.preview_button);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.button4);
-            this.Controls.Add(this.button3);
+            this.Controls.Add(this.save_button);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label13);
@@ -754,6 +773,8 @@
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.NewTray_FormClosed);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.trayWidth_numericUpDown)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.trayLength_numericUpDown)).EndInit();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
             this.groupBox3.ResumeLayout(false);
@@ -778,21 +799,17 @@
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.ComboBox comboBox3;
+        private System.Windows.Forms.ComboBox trayThickness_comboBox;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.ComboBox comboBox2;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox trayWidth_textBox;
-        private System.Windows.Forms.TextBox trayLength_textBox;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label trayLength_label;
-        private System.Windows.Forms.ComboBox comboBox5;
+        private System.Windows.Forms.ComboBox trayHeight_comboBox;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.ComboBox comboBox4;
+        private System.Windows.Forms.ComboBox trayCorner_comboBox;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.ComboBox comboBox6;
-        private System.Windows.Forms.Label label11;
         private System.Windows.Forms.ComboBox comboBox7;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.ComboBox comboBox9;
@@ -807,7 +824,7 @@
         private System.Windows.Forms.TextBox textBox6;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button save_button;
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.FolderBrowserDialog folderBrowserDialog1;
         private System.Windows.Forms.ComboBox comboBox8;
@@ -837,5 +854,7 @@
         private ObroundIndentControl obroundIndentControl1;
         private RectangleIndentControl rectangleIndentControl1;
         private System.Windows.Forms.Button preview_button;
+        private System.Windows.Forms.NumericUpDown trayLength_numericUpDown;
+        private System.Windows.Forms.NumericUpDown trayWidth_numericUpDown;
     }
 }
