@@ -28,25 +28,20 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.textBox1 = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.groupBox2.SuspendLayout();
+            this.roundDim = new System.Windows.Forms.GroupBox();
+            this.roundIndentWidth_numericUpDown = new System.Windows.Forms.NumericUpDown();
+            this.roundIndentLength_numericUpDown = new System.Windows.Forms.NumericUpDown();
+            this.roundDim.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.roundIndentWidth_numericUpDown)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.roundIndentLength_numericUpDown)).BeginInit();
             this.SuspendLayout();
-            // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(9, 32);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(59, 20);
-            this.textBox1.TabIndex = 0;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(6, 16);
+            this.label1.Location = new System.Drawing.Point(3, 16);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(22, 13);
             this.label1.TabIndex = 1;
@@ -55,51 +50,91 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(74, 16);
+            this.label2.Location = new System.Drawing.Point(140, 16);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(27, 13);
             this.label2.TabIndex = 3;
             this.label2.Text = "B/O";
             // 
-            // textBox2
+            // roundDim
             // 
-            this.textBox2.Location = new System.Drawing.Point(74, 32);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(59, 20);
-            this.textBox2.TabIndex = 2;
+            this.roundDim.Controls.Add(this.roundIndentWidth_numericUpDown);
+            this.roundDim.Controls.Add(this.roundIndentLength_numericUpDown);
+            this.roundDim.Controls.Add(this.label1);
+            this.roundDim.Controls.Add(this.label2);
+            this.roundDim.Location = new System.Drawing.Point(3, 3);
+            this.roundDim.Name = "roundDim";
+            this.roundDim.Size = new System.Drawing.Size(260, 60);
+            this.roundDim.TabIndex = 5;
+            this.roundDim.TabStop = false;
+            this.roundDim.Text = "Round";
             // 
-            // groupBox2
+            // roundIndentWidth_numericUpDown
             // 
-            this.groupBox2.Controls.Add(this.label1);
-            this.groupBox2.Controls.Add(this.textBox1);
-            this.groupBox2.Controls.Add(this.label2);
-            this.groupBox2.Controls.Add(this.textBox2);
-            this.groupBox2.Location = new System.Drawing.Point(3, 3);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(143, 66);
-            this.groupBox2.TabIndex = 5;
-            this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "Round";
+            this.roundIndentWidth_numericUpDown.DecimalPlaces = 2;
+            this.roundIndentWidth_numericUpDown.Location = new System.Drawing.Point(140, 32);
+            this.roundIndentWidth_numericUpDown.Maximum = new decimal(new int[] {
+            300,
+            0,
+            0,
+            0});
+            this.roundIndentWidth_numericUpDown.Minimum = new decimal(new int[] {
+            50,
+            0,
+            0,
+            0});
+            this.roundIndentWidth_numericUpDown.Name = "roundIndentWidth_numericUpDown";
+            this.roundIndentWidth_numericUpDown.Size = new System.Drawing.Size(75, 20);
+            this.roundIndentWidth_numericUpDown.TabIndex = 18;
+            this.roundIndentWidth_numericUpDown.Value = new decimal(new int[] {
+            300,
+            0,
+            0,
+            0});
+            // 
+            // roundIndentLength_numericUpDown
+            // 
+            this.roundIndentLength_numericUpDown.DecimalPlaces = 2;
+            this.roundIndentLength_numericUpDown.Location = new System.Drawing.Point(6, 32);
+            this.roundIndentLength_numericUpDown.Maximum = new decimal(new int[] {
+            300,
+            0,
+            0,
+            0});
+            this.roundIndentLength_numericUpDown.Minimum = new decimal(new int[] {
+            50,
+            0,
+            0,
+            0});
+            this.roundIndentLength_numericUpDown.Name = "roundIndentLength_numericUpDown";
+            this.roundIndentLength_numericUpDown.Size = new System.Drawing.Size(75, 20);
+            this.roundIndentLength_numericUpDown.TabIndex = 17;
+            this.roundIndentLength_numericUpDown.Value = new decimal(new int[] {
+            300,
+            0,
+            0,
+            0});
             // 
             // RoundIndentControl
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.groupBox2);
+            this.Controls.Add(this.roundDim);
             this.Name = "RoundIndentControl";
-            this.Size = new System.Drawing.Size(152, 74);
-            this.groupBox2.ResumeLayout(false);
-            this.groupBox2.PerformLayout();
+            this.Size = new System.Drawing.Size(303, 102);
+            this.roundDim.ResumeLayout(false);
+            this.roundDim.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.roundIndentWidth_numericUpDown)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.roundIndentLength_numericUpDown)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
-
-        private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.GroupBox roundDim;
+        private System.Windows.Forms.NumericUpDown roundIndentWidth_numericUpDown;
+        private System.Windows.Forms.NumericUpDown roundIndentLength_numericUpDown;
     }
 }

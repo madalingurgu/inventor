@@ -178,21 +178,21 @@ namespace InventorProject01
         }
 
         //Indent Type Combobox
-        private void comboBox8_SelectedIndexChanged(object sender, EventArgs e)
+        private void indentType_comboBox_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (comboBox8.SelectedIndex == 0)
+            if (indentType_comboBox.SelectedIndex == 0)
             {
                 roundIndentControl1.Show();
                 obroundIndentControl1.Hide();
                 rectangleIndentControl1.Hide();
             }
-            else if (comboBox8.SelectedIndex == 1)
+            else if (indentType_comboBox.SelectedIndex == 1)
             {
                 obroundIndentControl1.Show();
                 roundIndentControl1.Hide();
                 rectangleIndentControl1.Hide();
             }
-            else if (comboBox8.SelectedIndex == 2)
+            else if (indentType_comboBox.SelectedIndex == 2)
             {
                 rectangleIndentControl1.Show();
                 roundIndentControl1.Hide();
