@@ -62,9 +62,9 @@
             this.roundDim.Controls.Add(this.roundIndentLength_numericUpDown);
             this.roundDim.Controls.Add(this.label1);
             this.roundDim.Controls.Add(this.label2);
-            this.roundDim.Location = new System.Drawing.Point(3, 3);
+            this.roundDim.Location = new System.Drawing.Point(0, 0);
             this.roundDim.Name = "roundDim";
-            this.roundDim.Size = new System.Drawing.Size(260, 60);
+            this.roundDim.Size = new System.Drawing.Size(255, 60);
             this.roundDim.TabIndex = 5;
             this.roundDim.TabStop = false;
             this.roundDim.Text = "Round";
