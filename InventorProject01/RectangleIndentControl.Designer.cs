@@ -29,6 +29,8 @@
         private void InitializeComponent()
         {
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.numericUpDown4 = new System.Windows.Forms.NumericUpDown();
             this.label5 = new System.Windows.Forms.Label();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
@@ -41,16 +43,14 @@
             this.trayLength_numericUpDown = new System.Windows.Forms.NumericUpDown();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.numericUpDown4 = new System.Windows.Forms.NumericUpDown();
-            this.label6 = new System.Windows.Forms.Label();
             this.groupBox2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown4)).BeginInit();
             this.groupBox3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).BeginInit();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.trayLength_numericUpDown)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown4)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox2
@@ -63,15 +63,46 @@
             this.groupBox2.Controls.Add(this.groupBox1);
             this.groupBox2.Location = new System.Drawing.Point(3, 3);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(280, 194);
+            this.groupBox2.Size = new System.Drawing.Size(255, 200);
             this.groupBox2.TabIndex = 7;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Rectangle";
             // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(47, 173);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(74, 13);
+            this.label6.TabIndex = 20;
+            this.label6.Text = "Corner Radius";
+            // 
+            // numericUpDown4
+            // 
+            this.numericUpDown4.Location = new System.Drawing.Point(127, 171);
+            this.numericUpDown4.Maximum = new decimal(new int[] {
+            30,
+            0,
+            0,
+            0});
+            this.numericUpDown4.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.numericUpDown4.Name = "numericUpDown4";
+            this.numericUpDown4.Size = new System.Drawing.Size(73, 20);
+            this.numericUpDown4.TabIndex = 19;
+            this.numericUpDown4.Value = new decimal(new int[] {
+            6,
+            0,
+            0,
+            0});
+            // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(38, 122);
+            this.label5.Location = new System.Drawing.Point(47, 122);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(58, 13);
             this.label5.TabIndex = 8;
@@ -84,9 +115,9 @@
             this.comboBox1.Items.AddRange(new object[] {
             "Length",
             "Width"});
-            this.comboBox1.Location = new System.Drawing.Point(41, 138);
+            this.comboBox1.Location = new System.Drawing.Point(50, 140);
             this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(202, 21);
+            this.comboBox1.Size = new System.Drawing.Size(150, 21);
             this.comboBox1.TabIndex = 9;
             // 
             // groupBox3
@@ -95,9 +126,9 @@
             this.groupBox3.Controls.Add(this.numericUpDown2);
             this.groupBox3.Controls.Add(this.label3);
             this.groupBox3.Controls.Add(this.label4);
-            this.groupBox3.Location = new System.Drawing.Point(143, 19);
+            this.groupBox3.Location = new System.Drawing.Point(134, 19);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(131, 100);
+            this.groupBox3.Size = new System.Drawing.Size(115, 100);
             this.groupBox3.TabIndex = 8;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "B/O";
@@ -117,7 +148,7 @@
             0,
             0});
             this.numericUpDown3.Name = "numericUpDown3";
-            this.numericUpDown3.Size = new System.Drawing.Size(119, 20);
+            this.numericUpDown3.Size = new System.Drawing.Size(75, 20);
             this.numericUpDown3.TabIndex = 20;
             this.numericUpDown3.Value = new decimal(new int[] {
             50,
@@ -140,7 +171,7 @@
             0,
             0});
             this.numericUpDown2.Name = "numericUpDown2";
-            this.numericUpDown2.Size = new System.Drawing.Size(119, 20);
+            this.numericUpDown2.Size = new System.Drawing.Size(75, 20);
             this.numericUpDown2.TabIndex = 19;
             this.numericUpDown2.Value = new decimal(new int[] {
             300,
@@ -174,7 +205,7 @@
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Location = new System.Drawing.Point(6, 19);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(131, 100);
+            this.groupBox1.Size = new System.Drawing.Size(115, 100);
             this.groupBox1.TabIndex = 7;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "T/I";
@@ -194,7 +225,7 @@
             0,
             0});
             this.numericUpDown1.Name = "numericUpDown1";
-            this.numericUpDown1.Size = new System.Drawing.Size(119, 20);
+            this.numericUpDown1.Size = new System.Drawing.Size(75, 20);
             this.numericUpDown1.TabIndex = 19;
             this.numericUpDown1.Value = new decimal(new int[] {
             300,
@@ -217,7 +248,7 @@
             0,
             0});
             this.trayLength_numericUpDown.Name = "trayLength_numericUpDown";
-            this.trayLength_numericUpDown.Size = new System.Drawing.Size(119, 20);
+            this.trayLength_numericUpDown.Size = new System.Drawing.Size(75, 20);
             this.trayLength_numericUpDown.TabIndex = 18;
             this.trayLength_numericUpDown.Value = new decimal(new int[] {
             300,
@@ -243,46 +274,16 @@
             this.label2.TabIndex = 3;
             this.label2.Text = "Width";
             // 
-            // numericUpDown4
-            // 
-            this.numericUpDown4.Location = new System.Drawing.Point(118, 165);
-            this.numericUpDown4.Maximum = new decimal(new int[] {
-            30,
-            0,
-            0,
-            0});
-            this.numericUpDown4.Minimum = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
-            this.numericUpDown4.Name = "numericUpDown4";
-            this.numericUpDown4.Size = new System.Drawing.Size(119, 20);
-            this.numericUpDown4.TabIndex = 19;
-            this.numericUpDown4.Value = new decimal(new int[] {
-            6,
-            0,
-            0,
-            0});
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(38, 167);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(74, 13);
-            this.label6.TabIndex = 20;
-            this.label6.Text = "Corner Radius";
-            // 
             // RectangleIndentControl
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.groupBox2);
             this.Name = "RectangleIndentControl";
-            this.Size = new System.Drawing.Size(286, 200);
+            this.Size = new System.Drawing.Size(342, 264);
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown4)).EndInit();
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown3)).EndInit();
@@ -291,7 +292,6 @@
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.trayLength_numericUpDown)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown4)).EndInit();
             this.ResumeLayout(false);
 
         }

@@ -710,7 +710,6 @@
             // groupBox3
             // 
             this.groupBox3.Controls.Add(this.rectangleIndentControl1);
-            this.groupBox3.Controls.Add(this.obroundIndentControl1);
             this.groupBox3.Controls.Add(this.groupBox7);
             this.groupBox3.Controls.Add(this.groupBox6);
             this.groupBox3.Controls.Add(this.groupBox5);
@@ -720,6 +719,7 @@
             this.groupBox3.Controls.Add(this.roundIndentControl1);
             this.groupBox3.Controls.Add(this.label16);
             this.groupBox3.Controls.Add(this.indentType_comboBox);
+            this.groupBox3.Controls.Add(this.obroundIndentControl1);
             this.groupBox3.Location = new System.Drawing.Point(5, 281);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Size = new System.Drawing.Size(570, 257);
@@ -729,9 +729,9 @@
             // 
             // rectangleIndentControl1
             // 
-            this.rectangleIndentControl1.Location = new System.Drawing.Point(318, 206);
+            this.rectangleIndentControl1.Location = new System.Drawing.Point(300, 20);
             this.rectangleIndentControl1.Name = "rectangleIndentControl1";
-            this.rectangleIndentControl1.Size = new System.Drawing.Size(196, 227);
+            this.rectangleIndentControl1.Size = new System.Drawing.Size(262, 210);
             this.rectangleIndentControl1.TabIndex = 21;
             // 
             // obroundIndentControl1
