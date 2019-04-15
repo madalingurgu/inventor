@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
@@ -89,6 +90,7 @@
             this.obroundIndentControl1 = new InventorProject01.ObroundIndentControl();
             this.comboBox3 = new System.Windows.Forms.ComboBox();
             this.comboBox4 = new System.Windows.Forms.ComboBox();
+            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.trayWidth_numericUpDown)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.trayLength_numericUpDown)).BeginInit();
@@ -103,6 +105,7 @@
             this.groupBox7.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown7)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
             // 
             // textBox1
@@ -111,6 +114,8 @@
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(55, 20);
             this.textBox1.TabIndex = 0;
+            this.textBox1.Validating += new System.ComponentModel.CancelEventHandler(this.textBox1_Validating);
+            this.textBox1.Validated += new System.EventHandler(this.textBox1_Validated);
             // 
             // label1
             // 
@@ -601,9 +606,9 @@
             this.groupBox3.Controls.Add(this.groupBox4);
             this.groupBox3.Controls.Add(this.label17);
             this.groupBox3.Controls.Add(this.indentType_comboBox);
-            this.groupBox3.Controls.Add(this.obroundIndentControl1);
             this.groupBox3.Controls.Add(this.rectangleIndentControl1);
             this.groupBox3.Controls.Add(this.roundIndentControl1);
+            this.groupBox3.Controls.Add(this.obroundIndentControl1);
             this.groupBox3.Location = new System.Drawing.Point(5, 281);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Size = new System.Drawing.Size(570, 257);
@@ -859,6 +864,10 @@
             this.comboBox4.Size = new System.Drawing.Size(50, 21);
             this.comboBox4.TabIndex = 25;
             // 
+            // errorProvider1
+            // 
+            this.errorProvider1.ContainerControl = this;
+            // 
             // NewTray
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -903,6 +912,7 @@
             this.groupBox7.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown7)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -971,5 +981,6 @@
         private System.Windows.Forms.NumericUpDown numericUpDown3;
         private System.Windows.Forms.ComboBox comboBox4;
         private System.Windows.Forms.ComboBox comboBox3;
+        private System.Windows.Forms.ErrorProvider errorProvider1;
     }
 }
