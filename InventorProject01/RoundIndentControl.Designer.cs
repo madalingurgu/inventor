@@ -134,7 +134,7 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.GroupBox roundDim;
-        private System.Windows.Forms.NumericUpDown roundIndentWidth_numericUpDown;
-        private System.Windows.Forms.NumericUpDown roundIndentLength_numericUpDown;
+        public System.Windows.Forms.NumericUpDown roundIndentWidth_numericUpDown;
+        public System.Windows.Forms.NumericUpDown roundIndentLength_numericUpDown;
     }
 }

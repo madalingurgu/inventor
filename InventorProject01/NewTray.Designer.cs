@@ -65,40 +65,44 @@
             this.folderBrowserDialog1 = new System.Windows.Forms.FolderBrowserDialog();
             this.preview_button = new System.Windows.Forms.Button();
             this.indentType_comboBox = new System.Windows.Forms.ComboBox();
-            this.label16 = new System.Windows.Forms.Label();
-            this.textBox7 = new System.Windows.Forms.TextBox();
             this.label17 = new System.Windows.Forms.Label();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.radioButton2 = new System.Windows.Forms.RadioButton();
             this.radioButton1 = new System.Windows.Forms.RadioButton();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
             this.label19 = new System.Windows.Forms.Label();
-            this.textBox9 = new System.Windows.Forms.TextBox();
             this.label18 = new System.Windows.Forms.Label();
-            this.textBox8 = new System.Windows.Forms.TextBox();
-            this.groupBox6 = new System.Windows.Forms.GroupBox();
-            this.label20 = new System.Windows.Forms.Label();
-            this.textBox10 = new System.Windows.Forms.TextBox();
-            this.label21 = new System.Windows.Forms.Label();
-            this.textBox11 = new System.Windows.Forms.TextBox();
-            this.groupBox7 = new System.Windows.Forms.GroupBox();
-            this.label22 = new System.Windows.Forms.Label();
-            this.textBox12 = new System.Windows.Forms.TextBox();
-            this.label23 = new System.Windows.Forms.Label();
-            this.textBox13 = new System.Windows.Forms.TextBox();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
+            this.numericUpDown2 = new System.Windows.Forms.NumericUpDown();
+            this.numericUpDown3 = new System.Windows.Forms.NumericUpDown();
+            this.groupBox6 = new System.Windows.Forms.GroupBox();
+            this.label8 = new System.Windows.Forms.Label();
+            this.label11 = new System.Windows.Forms.Label();
+            this.groupBox7 = new System.Windows.Forms.GroupBox();
+            this.numericUpDown6 = new System.Windows.Forms.NumericUpDown();
+            this.numericUpDown7 = new System.Windows.Forms.NumericUpDown();
+            this.label16 = new System.Windows.Forms.Label();
+            this.label20 = new System.Windows.Forms.Label();
             this.rectangleIndentControl1 = new InventorProject01.RectangleIndentControl();
-            this.obroundIndentControl1 = new InventorProject01.ObroundIndentControl();
             this.roundIndentControl1 = new InventorProject01.RoundIndentControl();
+            this.obroundIndentControl1 = new InventorProject01.ObroundIndentControl();
+            this.comboBox3 = new System.Windows.Forms.ComboBox();
+            this.comboBox4 = new System.Windows.Forms.ComboBox();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.trayWidth_numericUpDown)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.trayLength_numericUpDown)).BeginInit();
             this.groupBox2.SuspendLayout();
             this.groupBox4.SuspendLayout();
             this.groupBox5.SuspendLayout();
+            this.groupBox3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown3)).BeginInit();
             this.groupBox6.SuspendLayout();
             this.groupBox7.SuspendLayout();
-            this.groupBox3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown6)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown7)).BeginInit();
             this.SuspendLayout();
             // 
             // textBox1
@@ -502,38 +506,23 @@
             // 
             // indentType_comboBox
             // 
+            this.indentType_comboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.indentType_comboBox.FormattingEnabled = true;
             this.indentType_comboBox.Items.AddRange(new object[] {
             "Round",
             "Obround",
             "Rectangle",
             "None"});
-            this.indentType_comboBox.Location = new System.Drawing.Point(9, 35);
+            this.indentType_comboBox.Location = new System.Drawing.Point(7, 41);
             this.indentType_comboBox.Name = "indentType_comboBox";
-            this.indentType_comboBox.Size = new System.Drawing.Size(80, 21);
+            this.indentType_comboBox.Size = new System.Drawing.Size(126, 21);
             this.indentType_comboBox.TabIndex = 12;
             this.indentType_comboBox.SelectedIndexChanged += new System.EventHandler(this.indentType_comboBox_SelectedIndexChanged);
-            // 
-            // label16
-            // 
-            this.label16.AutoSize = true;
-            this.label16.Location = new System.Drawing.Point(6, 19);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(31, 13);
-            this.label16.TabIndex = 11;
-            this.label16.Text = "Type";
-            // 
-            // textBox7
-            // 
-            this.textBox7.Location = new System.Drawing.Point(95, 36);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(86, 20);
-            this.textBox7.TabIndex = 14;
             // 
             // label17
             // 
             this.label17.AutoSize = true;
-            this.label17.Location = new System.Drawing.Point(92, 20);
+            this.label17.Location = new System.Drawing.Point(149, 26);
             this.label17.Name = "label17";
             this.label17.Size = new System.Drawing.Size(38, 13);
             this.label17.TabIndex = 15;
@@ -543,9 +532,9 @@
             // 
             this.groupBox4.Controls.Add(this.radioButton2);
             this.groupBox4.Controls.Add(this.radioButton1);
-            this.groupBox4.Location = new System.Drawing.Point(9, 71);
+            this.groupBox4.Location = new System.Drawing.Point(7, 72);
             this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Size = new System.Drawing.Size(86, 72);
+            this.groupBox4.Size = new System.Drawing.Size(126, 72);
             this.groupBox4.TabIndex = 16;
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Bottom";
@@ -553,6 +542,7 @@
             // radioButton2
             // 
             this.radioButton2.AutoSize = true;
+            this.radioButton2.Checked = true;
             this.radioButton2.Location = new System.Drawing.Point(7, 43);
             this.radioButton2.Name = "radioButton2";
             this.radioButton2.Size = new System.Drawing.Size(61, 17);
@@ -568,19 +558,18 @@
             this.radioButton1.Name = "radioButton1";
             this.radioButton1.Size = new System.Drawing.Size(42, 17);
             this.radioButton1.TabIndex = 0;
-            this.radioButton1.TabStop = true;
             this.radioButton1.Text = "Flat";
             this.radioButton1.UseVisualStyleBackColor = true;
             // 
             // groupBox5
             // 
+            this.groupBox5.Controls.Add(this.numericUpDown2);
+            this.groupBox5.Controls.Add(this.numericUpDown1);
             this.groupBox5.Controls.Add(this.label19);
-            this.groupBox5.Controls.Add(this.textBox9);
             this.groupBox5.Controls.Add(this.label18);
-            this.groupBox5.Controls.Add(this.textBox8);
-            this.groupBox5.Location = new System.Drawing.Point(101, 71);
+            this.groupBox5.Location = new System.Drawing.Point(148, 72);
             this.groupBox5.Name = "groupBox5";
-            this.groupBox5.Size = new System.Drawing.Size(121, 72);
+            this.groupBox5.Size = new System.Drawing.Size(126, 72);
             this.groupBox5.TabIndex = 17;
             this.groupBox5.TabStop = false;
             this.groupBox5.Text = "Radius";
@@ -588,144 +577,216 @@
             // label19
             // 
             this.label19.AutoSize = true;
-            this.label19.Location = new System.Drawing.Point(61, 16);
+            this.label19.Location = new System.Drawing.Point(62, 20);
             this.label19.Name = "label19";
             this.label19.Size = new System.Drawing.Size(25, 13);
             this.label19.TabIndex = 5;
             this.label19.Text = "Btm";
             // 
-            // textBox9
-            // 
-            this.textBox9.Location = new System.Drawing.Point(64, 32);
-            this.textBox9.Name = "textBox9";
-            this.textBox9.Size = new System.Drawing.Size(45, 20);
-            this.textBox9.TabIndex = 4;
-            // 
             // label18
             // 
             this.label18.AutoSize = true;
-            this.label18.Location = new System.Drawing.Point(6, 16);
+            this.label18.Location = new System.Drawing.Point(6, 22);
             this.label18.Name = "label18";
             this.label18.Size = new System.Drawing.Size(26, 13);
             this.label18.TabIndex = 3;
             this.label18.Text = "Top";
             // 
-            // textBox8
-            // 
-            this.textBox8.Location = new System.Drawing.Point(9, 32);
-            this.textBox8.Name = "textBox8";
-            this.textBox8.Size = new System.Drawing.Size(45, 20);
-            this.textBox8.TabIndex = 2;
-            // 
-            // groupBox6
-            // 
-            this.groupBox6.Controls.Add(this.label20);
-            this.groupBox6.Controls.Add(this.textBox10);
-            this.groupBox6.Controls.Add(this.label21);
-            this.groupBox6.Controls.Add(this.textBox11);
-            this.groupBox6.Location = new System.Drawing.Point(9, 149);
-            this.groupBox6.Name = "groupBox6";
-            this.groupBox6.Size = new System.Drawing.Size(86, 72);
-            this.groupBox6.TabIndex = 18;
-            this.groupBox6.TabStop = false;
-            this.groupBox6.Text = "Matrix";
-            // 
-            // label20
-            // 
-            this.label20.AutoSize = true;
-            this.label20.Location = new System.Drawing.Point(52, 16);
-            this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(14, 13);
-            this.label20.TabIndex = 5;
-            this.label20.Text = "Y";
-            // 
-            // textBox10
-            // 
-            this.textBox10.Location = new System.Drawing.Point(46, 32);
-            this.textBox10.Name = "textBox10";
-            this.textBox10.Size = new System.Drawing.Size(29, 20);
-            this.textBox10.TabIndex = 4;
-            // 
-            // label21
-            // 
-            this.label21.AutoSize = true;
-            this.label21.Location = new System.Drawing.Point(12, 16);
-            this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(14, 13);
-            this.label21.TabIndex = 3;
-            this.label21.Text = "X";
-            // 
-            // textBox11
-            // 
-            this.textBox11.Location = new System.Drawing.Point(6, 32);
-            this.textBox11.Name = "textBox11";
-            this.textBox11.Size = new System.Drawing.Size(29, 20);
-            this.textBox11.TabIndex = 2;
-            // 
-            // groupBox7
-            // 
-            this.groupBox7.Controls.Add(this.label22);
-            this.groupBox7.Controls.Add(this.textBox12);
-            this.groupBox7.Controls.Add(this.label23);
-            this.groupBox7.Controls.Add(this.textBox13);
-            this.groupBox7.Location = new System.Drawing.Point(99, 149);
-            this.groupBox7.Name = "groupBox7";
-            this.groupBox7.Size = new System.Drawing.Size(123, 72);
-            this.groupBox7.TabIndex = 19;
-            this.groupBox7.TabStop = false;
-            this.groupBox7.Text = "Pitch";
-            // 
-            // label22
-            // 
-            this.label22.AutoSize = true;
-            this.label22.Location = new System.Drawing.Point(85, 16);
-            this.label22.Name = "label22";
-            this.label22.Size = new System.Drawing.Size(14, 13);
-            this.label22.TabIndex = 5;
-            this.label22.Text = "Y";
-            // 
-            // textBox12
-            // 
-            this.textBox12.Location = new System.Drawing.Point(72, 32);
-            this.textBox12.Name = "textBox12";
-            this.textBox12.Size = new System.Drawing.Size(45, 20);
-            this.textBox12.TabIndex = 4;
-            // 
-            // label23
-            // 
-            this.label23.AutoSize = true;
-            this.label23.Location = new System.Drawing.Point(23, 16);
-            this.label23.Name = "label23";
-            this.label23.Size = new System.Drawing.Size(14, 13);
-            this.label23.TabIndex = 3;
-            this.label23.Text = "X";
-            // 
-            // textBox13
-            // 
-            this.textBox13.Location = new System.Drawing.Point(11, 32);
-            this.textBox13.Name = "textBox13";
-            this.textBox13.Size = new System.Drawing.Size(45, 20);
-            this.textBox13.TabIndex = 2;
-            // 
             // groupBox3
             // 
-            this.groupBox3.Controls.Add(this.rectangleIndentControl1);
             this.groupBox3.Controls.Add(this.groupBox7);
             this.groupBox3.Controls.Add(this.groupBox6);
+            this.groupBox3.Controls.Add(this.numericUpDown3);
             this.groupBox3.Controls.Add(this.groupBox5);
             this.groupBox3.Controls.Add(this.groupBox4);
             this.groupBox3.Controls.Add(this.label17);
-            this.groupBox3.Controls.Add(this.textBox7);
-            this.groupBox3.Controls.Add(this.roundIndentControl1);
-            this.groupBox3.Controls.Add(this.label16);
             this.groupBox3.Controls.Add(this.indentType_comboBox);
             this.groupBox3.Controls.Add(this.obroundIndentControl1);
+            this.groupBox3.Controls.Add(this.rectangleIndentControl1);
+            this.groupBox3.Controls.Add(this.roundIndentControl1);
             this.groupBox3.Location = new System.Drawing.Point(5, 281);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Size = new System.Drawing.Size(570, 257);
             this.groupBox3.TabIndex = 14;
             this.groupBox3.TabStop = false;
-            this.groupBox3.Text = "Indent";
+            this.groupBox3.Text = "Indent Type";
+            // 
+            // numericUpDown1
+            // 
+            this.numericUpDown1.DecimalPlaces = 1;
+            this.numericUpDown1.Location = new System.Drawing.Point(4, 38);
+            this.numericUpDown1.Maximum = new decimal(new int[] {
+            30,
+            0,
+            0,
+            0});
+            this.numericUpDown1.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.numericUpDown1.Name = "numericUpDown1";
+            this.numericUpDown1.Size = new System.Drawing.Size(55, 20);
+            this.numericUpDown1.TabIndex = 22;
+            this.numericUpDown1.Value = new decimal(new int[] {
+            6,
+            0,
+            0,
+            0});
+            // 
+            // numericUpDown2
+            // 
+            this.numericUpDown2.DecimalPlaces = 1;
+            this.numericUpDown2.Location = new System.Drawing.Point(65, 38);
+            this.numericUpDown2.Maximum = new decimal(new int[] {
+            30,
+            0,
+            0,
+            0});
+            this.numericUpDown2.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.numericUpDown2.Name = "numericUpDown2";
+            this.numericUpDown2.Size = new System.Drawing.Size(55, 20);
+            this.numericUpDown2.TabIndex = 23;
+            this.numericUpDown2.Value = new decimal(new int[] {
+            6,
+            0,
+            0,
+            0});
+            // 
+            // numericUpDown3
+            // 
+            this.numericUpDown3.DecimalPlaces = 2;
+            this.numericUpDown3.Location = new System.Drawing.Point(152, 42);
+            this.numericUpDown3.Maximum = new decimal(new int[] {
+            50,
+            0,
+            0,
+            0});
+            this.numericUpDown3.Minimum = new decimal(new int[] {
+            4,
+            0,
+            0,
+            0});
+            this.numericUpDown3.Name = "numericUpDown3";
+            this.numericUpDown3.Size = new System.Drawing.Size(55, 20);
+            this.numericUpDown3.TabIndex = 22;
+            this.numericUpDown3.Value = new decimal(new int[] {
+            20,
+            0,
+            0,
+            0});
+            // 
+            // groupBox6
+            // 
+            this.groupBox6.Controls.Add(this.comboBox4);
+            this.groupBox6.Controls.Add(this.comboBox3);
+            this.groupBox6.Controls.Add(this.label8);
+            this.groupBox6.Controls.Add(this.label11);
+            this.groupBox6.Location = new System.Drawing.Point(7, 150);
+            this.groupBox6.Name = "groupBox6";
+            this.groupBox6.Size = new System.Drawing.Size(126, 72);
+            this.groupBox6.TabIndex = 23;
+            this.groupBox6.TabStop = false;
+            this.groupBox6.Text = "Matrix";
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(69, 21);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(14, 13);
+            this.label8.TabIndex = 5;
+            this.label8.Text = "Y";
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Location = new System.Drawing.Point(6, 22);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(14, 13);
+            this.label11.TabIndex = 3;
+            this.label11.Text = "X";
+            // 
+            // groupBox7
+            // 
+            this.groupBox7.Controls.Add(this.numericUpDown6);
+            this.groupBox7.Controls.Add(this.numericUpDown7);
+            this.groupBox7.Controls.Add(this.label16);
+            this.groupBox7.Controls.Add(this.label20);
+            this.groupBox7.Location = new System.Drawing.Point(148, 150);
+            this.groupBox7.Name = "groupBox7";
+            this.groupBox7.Size = new System.Drawing.Size(126, 72);
+            this.groupBox7.TabIndex = 24;
+            this.groupBox7.TabStop = false;
+            this.groupBox7.Text = "Pitch";
+            // 
+            // numericUpDown6
+            // 
+            this.numericUpDown6.DecimalPlaces = 2;
+            this.numericUpDown6.Location = new System.Drawing.Point(65, 38);
+            this.numericUpDown6.Maximum = new decimal(new int[] {
+            300,
+            0,
+            0,
+            0});
+            this.numericUpDown6.Minimum = new decimal(new int[] {
+            20,
+            0,
+            0,
+            0});
+            this.numericUpDown6.Name = "numericUpDown6";
+            this.numericUpDown6.Size = new System.Drawing.Size(55, 20);
+            this.numericUpDown6.TabIndex = 23;
+            this.numericUpDown6.Value = new decimal(new int[] {
+            150,
+            0,
+            0,
+            0});
+            // 
+            // numericUpDown7
+            // 
+            this.numericUpDown7.DecimalPlaces = 2;
+            this.numericUpDown7.Location = new System.Drawing.Point(4, 38);
+            this.numericUpDown7.Maximum = new decimal(new int[] {
+            300,
+            0,
+            0,
+            0});
+            this.numericUpDown7.Minimum = new decimal(new int[] {
+            20,
+            0,
+            0,
+            0});
+            this.numericUpDown7.Name = "numericUpDown7";
+            this.numericUpDown7.Size = new System.Drawing.Size(55, 20);
+            this.numericUpDown7.TabIndex = 22;
+            this.numericUpDown7.Value = new decimal(new int[] {
+            150,
+            0,
+            0,
+            0});
+            // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.Location = new System.Drawing.Point(62, 22);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(14, 13);
+            this.label16.TabIndex = 5;
+            this.label16.Text = "Y";
+            // 
+            // label20
+            // 
+            this.label20.AutoSize = true;
+            this.label20.Location = new System.Drawing.Point(6, 22);
+            this.label20.Name = "label20";
+            this.label20.Size = new System.Drawing.Size(14, 13);
+            this.label20.TabIndex = 3;
+            this.label20.Text = "X";
             // 
             // rectangleIndentControl1
             // 
@@ -734,6 +795,13 @@
             this.rectangleIndentControl1.Size = new System.Drawing.Size(262, 210);
             this.rectangleIndentControl1.TabIndex = 21;
             // 
+            // roundIndentControl1
+            // 
+            this.roundIndentControl1.Location = new System.Drawing.Point(300, 20);
+            this.roundIndentControl1.Name = "roundIndentControl1";
+            this.roundIndentControl1.Size = new System.Drawing.Size(262, 81);
+            this.roundIndentControl1.TabIndex = 13;
+            // 
             // obroundIndentControl1
             // 
             this.obroundIndentControl1.Location = new System.Drawing.Point(300, 20);
@@ -741,12 +809,55 @@
             this.obroundIndentControl1.Size = new System.Drawing.Size(262, 180);
             this.obroundIndentControl1.TabIndex = 20;
             // 
-            // roundIndentControl1
+            // comboBox3
             // 
-            this.roundIndentControl1.Location = new System.Drawing.Point(300, 20);
-            this.roundIndentControl1.Name = "roundIndentControl1";
-            this.roundIndentControl1.Size = new System.Drawing.Size(262, 81);
-            this.roundIndentControl1.TabIndex = 13;
+            this.comboBox3.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBox3.FormattingEnabled = true;
+            this.comboBox3.Items.AddRange(new object[] {
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6",
+            "7",
+            "8",
+            "9",
+            "10",
+            "11",
+            "12",
+            "13",
+            "14",
+            "15"});
+            this.comboBox3.Location = new System.Drawing.Point(6, 37);
+            this.comboBox3.Name = "comboBox3";
+            this.comboBox3.Size = new System.Drawing.Size(50, 21);
+            this.comboBox3.TabIndex = 24;
+            // 
+            // comboBox4
+            // 
+            this.comboBox4.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBox4.FormattingEnabled = true;
+            this.comboBox4.Items.AddRange(new object[] {
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6",
+            "7",
+            "8",
+            "9",
+            "10",
+            "11",
+            "12",
+            "13",
+            "14",
+            "15"});
+            this.comboBox4.Location = new System.Drawing.Point(70, 37);
+            this.comboBox4.Name = "comboBox4";
+            this.comboBox4.Size = new System.Drawing.Size(50, 21);
+            this.comboBox4.TabIndex = 25;
             // 
             // NewTray
             // 
@@ -781,12 +892,17 @@
             this.groupBox4.PerformLayout();
             this.groupBox5.ResumeLayout(false);
             this.groupBox5.PerformLayout();
+            this.groupBox3.ResumeLayout(false);
+            this.groupBox3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown3)).EndInit();
             this.groupBox6.ResumeLayout(false);
             this.groupBox6.PerformLayout();
             this.groupBox7.ResumeLayout(false);
             this.groupBox7.PerformLayout();
-            this.groupBox3.ResumeLayout(false);
-            this.groupBox3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown6)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown7)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -831,30 +947,29 @@
         private System.Windows.Forms.NumericUpDown trayLength_numericUpDown;
         private System.Windows.Forms.NumericUpDown trayWidth_numericUpDown;
         private System.Windows.Forms.ComboBox indentType_comboBox;
-        private System.Windows.Forms.Label label16;
         private RoundIndentControl roundIndentControl1;
-        private System.Windows.Forms.TextBox textBox7;
         private System.Windows.Forms.Label label17;
         private System.Windows.Forms.GroupBox groupBox4;
         private System.Windows.Forms.RadioButton radioButton2;
         private System.Windows.Forms.RadioButton radioButton1;
         private System.Windows.Forms.GroupBox groupBox5;
         private System.Windows.Forms.Label label19;
-        private System.Windows.Forms.TextBox textBox9;
         private System.Windows.Forms.Label label18;
-        private System.Windows.Forms.TextBox textBox8;
-        private System.Windows.Forms.GroupBox groupBox6;
-        private System.Windows.Forms.Label label20;
-        private System.Windows.Forms.TextBox textBox10;
-        private System.Windows.Forms.Label label21;
-        private System.Windows.Forms.TextBox textBox11;
-        private System.Windows.Forms.GroupBox groupBox7;
-        private System.Windows.Forms.Label label22;
-        private System.Windows.Forms.TextBox textBox12;
-        private System.Windows.Forms.Label label23;
-        private System.Windows.Forms.TextBox textBox13;
         private ObroundIndentControl obroundIndentControl1;
         private RectangleIndentControl rectangleIndentControl1;
         private System.Windows.Forms.GroupBox groupBox3;
+        private System.Windows.Forms.NumericUpDown numericUpDown2;
+        private System.Windows.Forms.NumericUpDown numericUpDown1;
+        private System.Windows.Forms.GroupBox groupBox7;
+        private System.Windows.Forms.NumericUpDown numericUpDown6;
+        private System.Windows.Forms.NumericUpDown numericUpDown7;
+        private System.Windows.Forms.Label label16;
+        private System.Windows.Forms.Label label20;
+        private System.Windows.Forms.GroupBox groupBox6;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.NumericUpDown numericUpDown3;
+        private System.Windows.Forms.ComboBox comboBox4;
+        private System.Windows.Forms.ComboBox comboBox3;
     }
 }

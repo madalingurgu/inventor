@@ -38,7 +38,7 @@
             this.label4 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
-            this.trayLength_numericUpDown = new System.Windows.Forms.NumericUpDown();
+            this.numericUpDown5 = new System.Windows.Forms.NumericUpDown();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.groupBox2.SuspendLayout();
@@ -47,7 +47,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).BeginInit();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.trayLength_numericUpDown)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown5)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox2
@@ -164,7 +164,7 @@
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.numericUpDown1);
-            this.groupBox1.Controls.Add(this.trayLength_numericUpDown);
+            this.groupBox1.Controls.Add(this.numericUpDown5);
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Location = new System.Drawing.Point(6, 19);
@@ -199,22 +199,22 @@
             // 
             // trayLength_numericUpDown
             // 
-            this.trayLength_numericUpDown.DecimalPlaces = 2;
-            this.trayLength_numericUpDown.Location = new System.Drawing.Point(6, 32);
-            this.trayLength_numericUpDown.Maximum = new decimal(new int[] {
+            this.numericUpDown5.DecimalPlaces = 2;
+            this.numericUpDown5.Location = new System.Drawing.Point(6, 32);
+            this.numericUpDown5.Maximum = new decimal(new int[] {
             300,
             0,
             0,
             0});
-            this.trayLength_numericUpDown.Minimum = new decimal(new int[] {
+            this.numericUpDown5.Minimum = new decimal(new int[] {
             50,
             0,
             0,
             0});
-            this.trayLength_numericUpDown.Name = "trayLength_numericUpDown";
-            this.trayLength_numericUpDown.Size = new System.Drawing.Size(75, 20);
-            this.trayLength_numericUpDown.TabIndex = 18;
-            this.trayLength_numericUpDown.Value = new decimal(new int[] {
+            this.numericUpDown5.Name = "trayLength_numericUpDown";
+            this.numericUpDown5.Size = new System.Drawing.Size(75, 20);
+            this.numericUpDown5.TabIndex = 18;
+            this.numericUpDown5.Value = new decimal(new int[] {
             300,
             0,
             0,
@@ -254,7 +254,7 @@
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.trayLength_numericUpDown)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown5)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -269,10 +269,10 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.NumericUpDown numericUpDown3;
-        private System.Windows.Forms.NumericUpDown numericUpDown2;
-        private System.Windows.Forms.NumericUpDown numericUpDown1;
-        private System.Windows.Forms.NumericUpDown trayLength_numericUpDown;
+        public System.Windows.Forms.ComboBox comboBox1;
+        public System.Windows.Forms.NumericUpDown numericUpDown3;
+        public System.Windows.Forms.NumericUpDown numericUpDown2;
+        public System.Windows.Forms.NumericUpDown numericUpDown1;
+        public System.Windows.Forms.NumericUpDown numericUpDown5;
     }
 }

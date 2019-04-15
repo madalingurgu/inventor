@@ -48,6 +48,29 @@ namespace InventorProject01
 
             trayLength_numericUpDown.Text = "";
             trayWidth_numericUpDown.Text = "";
+            numericUpDown3.Text = "";
+            numericUpDown2.Text = "";
+            numericUpDown1.Text = "";
+            numericUpDown7.Text = "";
+            numericUpDown6.Text = "";
+
+            roundIndentControl1.roundIndentWidth_numericUpDown.Text = "";
+            roundIndentControl1.roundIndentLength_numericUpDown.Text = "";
+
+            rectangleIndentControl1.numericUpDown5.Text = "";
+            rectangleIndentControl1.numericUpDown4.Text = "";
+            rectangleIndentControl1.numericUpDown3.Text = "";
+            rectangleIndentControl1.numericUpDown2.Text = "";
+            rectangleIndentControl1.numericUpDown1.Text = "";
+
+            obroundIndentControl1.numericUpDown5.Text = "";
+            obroundIndentControl1.numericUpDown3.Text = "";
+            obroundIndentControl1.numericUpDown2.Text = "";
+            obroundIndentControl1.numericUpDown1.Text = "";
+
+            indentType_comboBox.SelectedIndex = 3;
+            rectangleIndentControl1.comboBox1.SelectedIndex = 0;
+            obroundIndentControl1.comboBox1.SelectedIndex = 0;
 
             roundIndentControl1.Hide();
             obroundIndentControl1.Hide();
@@ -185,24 +208,48 @@ namespace InventorProject01
                 roundIndentControl1.Show();
                 obroundIndentControl1.Hide();
                 rectangleIndentControl1.Hide();
+                groupBox4.Show();
+                groupBox5.Show();
+                groupBox6.Show();
+                groupBox7.Show();
+                label17.Show();
+                numericUpDown3.Show();
             }
             else if (indentType_comboBox.SelectedIndex == 1)
             {
                 obroundIndentControl1.Show();
                 roundIndentControl1.Hide();
                 rectangleIndentControl1.Hide();
+                groupBox4.Show();
+                groupBox5.Show();
+                groupBox6.Show();
+                groupBox7.Show();
+                label17.Show();
+                numericUpDown3.Show();
             }
             else if (indentType_comboBox.SelectedIndex == 2)
             {
                 rectangleIndentControl1.Show();
                 roundIndentControl1.Hide();
                 obroundIndentControl1.Hide();
+                groupBox4.Show();
+                groupBox5.Show();
+                groupBox6.Show();
+                groupBox7.Show();
+                label17.Show();
+                numericUpDown3.Show();
             }
             else
             {
                 roundIndentControl1.Hide();
                 obroundIndentControl1.Hide();
                 rectangleIndentControl1.Hide();
+                groupBox4.Hide();
+                groupBox5.Hide();
+                groupBox6.Hide();
+                groupBox7.Hide();
+                label17.Hide();
+                numericUpDown3.Hide();
             }
         }
 
