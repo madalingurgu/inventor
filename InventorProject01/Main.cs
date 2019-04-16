@@ -14,7 +14,7 @@ namespace InventorProject01
 {
     public partial class Main : Form
     {
-        Form f = new NewTray();
+        
         public Main()
         {
             InitializeComponent();
@@ -23,6 +23,12 @@ namespace InventorProject01
 
         private void button1_Click(object sender, EventArgs e)
         {
+            OpenChild();
+        }
+
+        private void OpenChild()
+        {
+            Form f = new NewTray();
             f.Show();
         }
 

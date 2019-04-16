@@ -28,14 +28,17 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.roundDim = new System.Windows.Forms.GroupBox();
             this.roundIndentWidth_numericUpDown = new System.Windows.Forms.NumericUpDown();
             this.roundIndentLength_numericUpDown = new System.Windows.Forms.NumericUpDown();
+            this.errorProvider_round = new System.Windows.Forms.ErrorProvider(this.components);
             this.roundDim.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.roundIndentWidth_numericUpDown)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.roundIndentLength_numericUpDown)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider_round)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -91,6 +94,8 @@
             0,
             0,
             0});
+            this.roundIndentWidth_numericUpDown.Validating += new System.ComponentModel.CancelEventHandler(this.roundIndentWidth_numericUpDown_Validating);
+            this.roundIndentWidth_numericUpDown.Validated += new System.EventHandler(this.roundIndentWidth_numericUpDown_Validated);
             // 
             // roundIndentLength_numericUpDown
             // 
@@ -114,6 +119,12 @@
             0,
             0,
             0});
+            this.roundIndentLength_numericUpDown.Validating += new System.ComponentModel.CancelEventHandler(this.roundIndentLength_numericUpDown_Validating);
+            this.roundIndentLength_numericUpDown.Validated += new System.EventHandler(this.roundIndentLength_numericUpDown_Validated);
+            // 
+            // errorProvider_round
+            // 
+            this.errorProvider_round.ContainerControl = this;
             // 
             // RoundIndentControl
             // 
@@ -126,6 +137,7 @@
             this.roundDim.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.roundIndentWidth_numericUpDown)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.roundIndentLength_numericUpDown)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider_round)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -136,5 +148,6 @@
         private System.Windows.Forms.GroupBox roundDim;
         public System.Windows.Forms.NumericUpDown roundIndentWidth_numericUpDown;
         public System.Windows.Forms.NumericUpDown roundIndentLength_numericUpDown;
+        private System.Windows.Forms.ErrorProvider errorProvider_round;
     }
 }

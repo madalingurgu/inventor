@@ -118,6 +118,11 @@ namespace InventorProject01
             _invApp = null;
         }
 
+        private void NewTray_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            e.Cancel = false;
+        }
+
         public void NewDoc()
         {
             string home, work, choice, standard, inverted1, inverted2;
@@ -277,50 +282,11 @@ namespace InventorProject01
         {
             
         }
-
-        //textBox1 validating
-        private void textBox1_Validating(object sender, CancelEventArgs e)
+        //Select path on click
+        private void textBox6_MouseClick(object sender, MouseEventArgs e)
         {
-            string errorMsg;
-            if(!ValidTrayNumber(textBox1.Text, out errorMsg))
-            {
-                // Cancel the event and select the text to be corrected by the user.
-                e.Cancel = true;
-                textBox1.Select(0, textBox1.Text.Length);
-
-                // Set the ErrorProvider error with the text to display. 
-                this.errorProvider1.SetError(textBox1, errorMsg);
-            }
-
-        }
-
-        //textBox1 validated
-        private void textBox1_Validated(object sender, EventArgs e)
-        {
-            // If all conditions have been met, clear the ErrorProvider of errors.
-            errorProvider1.SetError(textBox1, "");
-        }
-
-
-        public bool ValidTrayNumber(string trayNumber, out string errorMessage)
-        {
-            // Confirm that the Tray number string is not empty.
-            if(trayNumber.Length <= 0)
-            {
-                errorMessage = "Tray number is required!";
-                
-                preview_button.Enabled = false;
-                save_button.Enabled = false;
-                return false;
-            }
-            else
-            {
-                errorMessage = "";
-                
-                preview_button.Enabled = true;
-                save_button.Enabled = true;
-                return true;
-            }
+            folderBrowserDialog1.ShowDialog();
+            textBox6.Text = folderBrowserDialog1.SelectedPath.ToString();
         }
 
     }

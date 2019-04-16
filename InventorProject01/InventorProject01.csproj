@@ -83,6 +83,9 @@
     <Compile Include="RoundIndentControl.Designer.cs">
       <DependentUpon>RoundIndentControl.cs</DependentUpon>
     </Compile>
+    <Compile Include="Validation.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <EmbeddedResource Include="Main.resx">
       <DependentUpon>Main.cs</DependentUpon>
     </EmbeddedResource>
