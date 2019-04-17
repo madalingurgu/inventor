@@ -68,6 +68,18 @@ namespace InventorProject01
             obroundIndentControl1.numericUpDown2.Text = "";
             obroundIndentControl1.numericUpDown1.Text = "";
 
+            comboBox1.SelectedIndex = 0;
+            comboBox2.SelectedIndex = 0;
+            trayCorner_comboBox.SelectedIndex = 1;
+            trayThickness_comboBox.SelectedIndex = 1;
+            trayHeight_comboBox.SelectedIndex = 2;
+            comboBox7.SelectedIndex = 0;
+            comboBox9.SelectedIndex = 1;
+            comboBox10.SelectedIndex = 0;
+            comboBox3.SelectedIndex = 0;
+            comboBox4.SelectedIndex = 0;
+
+
             indentType_comboBox.SelectedIndex = 3;
             rectangleIndentControl1.comboBox1.SelectedIndex = 0;
             obroundIndentControl1.comboBox1.SelectedIndex = 0;
@@ -288,6 +300,7 @@ namespace InventorProject01
             folderBrowserDialog1.ShowDialog();
             textBox6.Text = folderBrowserDialog1.SelectedPath.ToString();
         }
+
 
     }
 }
