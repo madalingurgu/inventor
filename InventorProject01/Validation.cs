@@ -14,6 +14,8 @@ namespace InventorProject01
 {
     public partial class NewTray : Form
     {
+        bool trayValid = false;
+
         //textBox1 - BBT number validating
         private void textBox1_Validating(object sender, CancelEventArgs e)
         {
@@ -395,8 +397,8 @@ namespace InventorProject01
             {
                 errorMessage = "";
 
-                preview_button.Enabled = true;
-                save_button.Enabled = true;
+                //preview_button.Enabled = true;
+                //save_button.Enabled = true;
                 return true;
             }
         }

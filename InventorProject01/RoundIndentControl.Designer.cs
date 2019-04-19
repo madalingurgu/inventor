@@ -94,8 +94,6 @@
             0,
             0,
             0});
-            this.roundIndentWidth_numericUpDown.Validating += new System.ComponentModel.CancelEventHandler(this.roundIndentWidth_numericUpDown_Validating);
-            this.roundIndentWidth_numericUpDown.Validated += new System.EventHandler(this.roundIndentWidth_numericUpDown_Validated);
             // 
             // roundIndentLength_numericUpDown
             // 
@@ -119,8 +117,6 @@
             0,
             0,
             0});
-            this.roundIndentLength_numericUpDown.Validating += new System.ComponentModel.CancelEventHandler(this.roundIndentLength_numericUpDown_Validating);
-            this.roundIndentLength_numericUpDown.Validated += new System.EventHandler(this.roundIndentLength_numericUpDown_Validated);
             // 
             // errorProvider_round
             // 
