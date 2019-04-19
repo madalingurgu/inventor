@@ -24,6 +24,7 @@ namespace InventorProject01
         PartComponentDefinition oCompDef;
 
         bool _started = false;
+        bool controlTouch = false;
 
        
 
@@ -300,7 +301,5 @@ namespace InventorProject01
             folderBrowserDialog1.ShowDialog();
             textBox6.Text = folderBrowserDialog1.SelectedPath.ToString();
         }
-
-
     }
 }
