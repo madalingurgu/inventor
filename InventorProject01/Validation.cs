@@ -56,6 +56,7 @@ namespace InventorProject01
         {
             // If all conditions have been met, clear the ErrorProvider of errors.
             errorProvider1.SetError(textBox6, "");
+            trayLength_numericUpDown.Focus();
         }
 
         private void comboBox1_Validating(object sender, CancelEventArgs e)
@@ -96,6 +97,7 @@ namespace InventorProject01
         {
             // If all conditions have been met, clear the ErrorProvider of errors.
             errorProvider1.SetError(trayLength_numericUpDown, "");
+            trayWidth_numericUpDown.Focus();
         }
 
         private void trayWidth_numericUpDown_Validating(object sender, CancelEventArgs e)
@@ -143,50 +145,98 @@ namespace InventorProject01
 
         private void numericUpDown1_Validating(object sender, CancelEventArgs e)
         {
+            if (!(indentType_comboBox.SelectedIndex == 3))
+            {
+                string errorMsg;
+                if (!ValidText(numericUpDown1.Text, out errorMsg))
+                {
+                    // Cancel the event and select the text to be corrected by the user.
+                    e.Cancel = true;
+                    numericUpDown1.Select(0, numericUpDown1.Text.Length);
 
+                    // Set the ErrorProvider error with the text to display. 
+                    this.errorProvider1.SetError(numericUpDown1, errorMsg);
+                }
+            }
         }
 
         private void numericUpDown1_Validated(object sender, EventArgs e)
         {
-
+            // If all conditions have been met, clear the ErrorProvider of errors.
+            errorProvider1.SetError(numericUpDown1, "");
+            numericUpDown2.Focus();
         }
 
         private void numericUpDown2_Validating(object sender, CancelEventArgs e)
         {
+            if (!(indentType_comboBox.SelectedIndex == 3))
+            {
+                string errorMsg;
+                if (!ValidText(numericUpDown2.Text, out errorMsg))
+                {
+                    // Cancel the event and select the text to be corrected by the user.
+                    e.Cancel = true;
+                    numericUpDown2.Select(0, numericUpDown2.Text.Length);
 
+                    // Set the ErrorProvider error with the text to display. 
+                    this.errorProvider1.SetError(numericUpDown2, errorMsg);
+                }
+            }
         }
 
         private void numericUpDown2_Validated(object sender, EventArgs e)
         {
-
+            // If all conditions have been met, clear the ErrorProvider of errors.
+            errorProvider1.SetError(numericUpDown2, "");
+            numericUpDown7.Focus();
         }
 
         private void numericUpDown7_Validating(object sender, CancelEventArgs e)
         {
+            if (!(indentType_comboBox.SelectedIndex == 3))
+            {
+                string errorMsg;
+                if (!ValidText(numericUpDown7.Text, out errorMsg))
+                {
+                    // Cancel the event and select the text to be corrected by the user.
+                    e.Cancel = true;
+                    numericUpDown7.Select(0, numericUpDown7.Text.Length);
 
-        }
+                    // Set the ErrorProvider error with the text to display. 
+                    this.errorProvider1.SetError(numericUpDown7, errorMsg);
+                }
+            }
+    }
 
         private void numericUpDown7_Validated(object sender, EventArgs e)
         {
-
+            // If all conditions have been met, clear the ErrorProvider of errors.
+            errorProvider1.SetError(numericUpDown7, "");
+            numericUpDown6.Focus();
         }
 
         private void numericUpDown6_Validating(object sender, CancelEventArgs e)
         {
+            if (!(indentType_comboBox.SelectedIndex == 3))
+            {
+                string errorMsg;
+                if (!ValidText(numericUpDown6.Text, out errorMsg))
+                {
+                    // Cancel the event and select the text to be corrected by the user.
+                    e.Cancel = true;
+                    numericUpDown6.Select(0, numericUpDown6.Text.Length);
 
+                    // Set the ErrorProvider error with the text to display. 
+                    this.errorProvider1.SetError(numericUpDown6, errorMsg);
+                }
+            }
         }
 
         private void numericUpDown6_Validated(object sender, EventArgs e)
         {
-
+            // If all conditions have been met, clear the ErrorProvider of errors.
+            errorProvider1.SetError(numericUpDown6, "");
         }
-
-
-
-
-
-
-
 
 
         private void roundIndentControl1_Validating(object sender, CancelEventArgs e)
