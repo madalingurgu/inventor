@@ -24,9 +24,6 @@ namespace InventorProject01
         PartComponentDefinition oCompDef;
 
         bool _started = false;
-        bool controlTouch = false;
-
-       
 
         public void PlaneVisibilityOff(PartDocument doc, WorkFeatureTypes FeatureType, Boolean visible)
         {
@@ -46,6 +43,15 @@ namespace InventorProject01
         public NewTray()
         {
             InitializeComponent();
+
+            foreach (Control tb in Controls)
+            {
+                if (tb is System.Windows.Forms.TextBox)
+                {
+                    tb.Leave += new System.EventHandler(myControlText_Leave);
+                }
+                
+            }
 
             trayLength_numericUpDown.Text = "";
             trayWidth_numericUpDown.Text = "";
@@ -301,5 +307,41 @@ namespace InventorProject01
             folderBrowserDialog1.ShowDialog();
             textBox6.Text = folderBrowserDialog1.SelectedPath.ToString();
         }
+
+        public void myControlText_Leave(object sender, EventArgs e)
+        {
+            
+            int count = 0;
+            int allCounts = 0;
+
+            foreach (Control tb in Controls)
+            {
+                if (tb is System.Windows.Forms.TextBox)
+                {
+                    allCounts++;
+                    if (!(tb.Text.Length <= 0))
+                    {
+                        count++;
+                    }
+
+                }
+
+            }
+
+            //MessageBox.Show("all count = " + allCounts);
+            //MessageBox.Show("valid count = " + count);
+
+            if (allCounts == count)
+            {
+                preview_button.Enabled = true;
+                save_button.Enabled = true;
+            }
+            else
+            {
+                preview_button.Enabled = false;
+                save_button.Enabled = false;
+            }
+        }
+
     }
-}
+    }

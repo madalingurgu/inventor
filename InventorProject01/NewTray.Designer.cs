@@ -87,10 +87,10 @@
             this.label8 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.numericUpDown3 = new System.Windows.Forms.NumericUpDown();
+            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             this.rectangleIndentControl1 = new InventorProject01.RectangleIndentControl();
             this.roundIndentControl1 = new InventorProject01.RoundIndentControl();
             this.obroundIndentControl1 = new InventorProject01.ObroundIndentControl();
-            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.trayWidth_numericUpDown)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.trayLength_numericUpDown)).BeginInit();
@@ -114,8 +114,6 @@
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(55, 20);
             this.textBox1.TabIndex = 0;
-            this.textBox1.Validating += new System.ComponentModel.CancelEventHandler(this.textBox1_Validating);
-            this.textBox1.Validated += new System.EventHandler(this.textBox1_Validated);
             // 
             // label1
             // 
@@ -172,8 +170,6 @@
             0,
             0,
             0});
-            this.trayWidth_numericUpDown.Validating += new System.ComponentModel.CancelEventHandler(this.trayWidth_numericUpDown_Validating);
-            this.trayWidth_numericUpDown.Validated += new System.EventHandler(this.trayWidth_numericUpDown_Validated);
             // 
             // trayLength_numericUpDown
             // 
@@ -197,8 +193,6 @@
             0,
             0,
             0});
-            this.trayLength_numericUpDown.Validating += new System.ComponentModel.CancelEventHandler(this.trayLength_numericUpDown_Validating);
-            this.trayLength_numericUpDown.Validated += new System.EventHandler(this.trayLength_numericUpDown_Validated);
             // 
             // label7
             // 
@@ -319,8 +313,6 @@
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(131, 21);
             this.comboBox1.TabIndex = 1;
-            this.comboBox1.Validating += new System.ComponentModel.CancelEventHandler(this.comboBox1_Validating);
-            this.comboBox1.Validated += new System.EventHandler(this.comboBox1_Validated);
             // 
             // label2
             // 
@@ -466,8 +458,6 @@
             this.textBox6.Size = new System.Drawing.Size(333, 20);
             this.textBox6.TabIndex = 4;
             this.textBox6.MouseClick += new System.Windows.Forms.MouseEventHandler(this.textBox6_MouseClick);
-            this.textBox6.Validating += new System.ComponentModel.CancelEventHandler(this.textBox6_Validating);
-            this.textBox6.Validated += new System.EventHandler(this.textBox6_Validated);
             // 
             // button1
             // 
@@ -610,8 +600,6 @@
             0,
             0,
             0});
-            this.numericUpDown2.Validating += new System.ComponentModel.CancelEventHandler(this.numericUpDown2_Validating);
-            this.numericUpDown2.Validated += new System.EventHandler(this.numericUpDown2_Validated);
             // 
             // numericUpDown1
             // 
@@ -635,8 +623,6 @@
             0,
             0,
             0});
-            this.numericUpDown1.Validating += new System.ComponentModel.CancelEventHandler(this.numericUpDown1_Validating);
-            this.numericUpDown1.Validated += new System.EventHandler(this.numericUpDown1_Validated);
             // 
             // label19
             // 
@@ -710,8 +696,6 @@
             0,
             0,
             0});
-            this.numericUpDown6.Validating += new System.ComponentModel.CancelEventHandler(this.numericUpDown6_Validating);
-            this.numericUpDown6.Validated += new System.EventHandler(this.numericUpDown6_Validated);
             // 
             // numericUpDown7
             // 
@@ -735,8 +719,6 @@
             0,
             0,
             0});
-            this.numericUpDown7.Validating += new System.ComponentModel.CancelEventHandler(this.numericUpDown7_Validating);
-            this.numericUpDown7.Validated += new System.EventHandler(this.numericUpDown7_Validated);
             // 
             // label16
             // 
@@ -859,8 +841,10 @@
             0,
             0,
             0});
-            this.numericUpDown3.Validating += new System.ComponentModel.CancelEventHandler(this.numericUpDown3_Validating);
-            this.numericUpDown3.Validated += new System.EventHandler(this.numericUpDown3_Validated);
+            // 
+            // errorProvider1
+            // 
+            this.errorProvider1.ContainerControl = this;
             // 
             // rectangleIndentControl1
             // 
@@ -868,8 +852,6 @@
             this.rectangleIndentControl1.Name = "rectangleIndentControl1";
             this.rectangleIndentControl1.Size = new System.Drawing.Size(262, 210);
             this.rectangleIndentControl1.TabIndex = 21;
-            this.rectangleIndentControl1.Validating += new System.ComponentModel.CancelEventHandler(this.rectangleIndentControl1_Validating);
-            this.rectangleIndentControl1.Validated += new System.EventHandler(this.rectangleIndentControl1_Validated);
             // 
             // roundIndentControl1
             // 
@@ -877,8 +859,6 @@
             this.roundIndentControl1.Name = "roundIndentControl1";
             this.roundIndentControl1.Size = new System.Drawing.Size(262, 81);
             this.roundIndentControl1.TabIndex = 13;
-            this.roundIndentControl1.Validating += new System.ComponentModel.CancelEventHandler(this.roundIndentControl1_Validating);
-            this.roundIndentControl1.Validated += new System.EventHandler(this.roundIndentControl1_Validated);
             // 
             // obroundIndentControl1
             // 
@@ -886,12 +866,6 @@
             this.obroundIndentControl1.Name = "obroundIndentControl1";
             this.obroundIndentControl1.Size = new System.Drawing.Size(262, 180);
             this.obroundIndentControl1.TabIndex = 20;
-            this.obroundIndentControl1.Validating += new System.ComponentModel.CancelEventHandler(this.obroundIndentControl1_Validating);
-            this.obroundIndentControl1.Validated += new System.EventHandler(this.obroundIndentControl1_Validated);
-            // 
-            // errorProvider1
-            // 
-            this.errorProvider1.ContainerControl = this;
             // 
             // NewTray
             // 
