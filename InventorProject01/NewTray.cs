@@ -50,7 +50,22 @@ namespace InventorProject01
                 {
                     tb.Leave += new System.EventHandler(myControlText_Leave);
                 }
-                
+            }
+
+            foreach (Control tb in Controls)
+            {
+                if (tb is System.Windows.Forms.NumericUpDown)
+                {
+                    tb.KeyUp += new System.Windows.Forms.KeyEventHandler(myTextBox_KeyUp);
+                }
+            }
+
+            foreach (Control nud in Controls)
+            {
+                if (nud is System.Windows.Forms.NumericUpDown)
+                {
+                    nud.KeyUp += new System.Windows.Forms.KeyEventHandler(myTextBox_KeyUp);
+                }
             }
 
             trayLength_numericUpDown.Text = "";
@@ -307,41 +322,5 @@ namespace InventorProject01
             folderBrowserDialog1.ShowDialog();
             textBox6.Text = folderBrowserDialog1.SelectedPath.ToString();
         }
-
-        public void myControlText_Leave(object sender, EventArgs e)
-        {
-            
-            int count = 0;
-            int allCounts = 0;
-
-            foreach (Control tb in Controls)
-            {
-                if (tb is System.Windows.Forms.TextBox)
-                {
-                    allCounts++;
-                    if (!(tb.Text.Length <= 0))
-                    {
-                        count++;
-                    }
-
-                }
-
-            }
-
-            //MessageBox.Show("all count = " + allCounts);
-            //MessageBox.Show("valid count = " + count);
-
-            if (allCounts == count)
-            {
-                preview_button.Enabled = true;
-                save_button.Enabled = true;
-            }
-            else
-            {
-                preview_button.Enabled = false;
-                save_button.Enabled = false;
-            }
-        }
-
     }
     }

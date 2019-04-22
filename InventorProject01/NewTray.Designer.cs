@@ -87,10 +87,10 @@
             this.label8 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.numericUpDown3 = new System.Windows.Forms.NumericUpDown();
-            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             this.rectangleIndentControl1 = new InventorProject01.RectangleIndentControl();
             this.roundIndentControl1 = new InventorProject01.RoundIndentControl();
             this.obroundIndentControl1 = new InventorProject01.ObroundIndentControl();
+            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.trayWidth_numericUpDown)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.trayLength_numericUpDown)).BeginInit();
@@ -114,6 +114,7 @@
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(55, 20);
             this.textBox1.TabIndex = 0;
+            
             // 
             // label1
             // 
@@ -842,10 +843,6 @@
             0,
             0});
             // 
-            // errorProvider1
-            // 
-            this.errorProvider1.ContainerControl = this;
-            // 
             // rectangleIndentControl1
             // 
             this.rectangleIndentControl1.Location = new System.Drawing.Point(300, 20);
@@ -866,6 +863,10 @@
             this.obroundIndentControl1.Name = "obroundIndentControl1";
             this.obroundIndentControl1.Size = new System.Drawing.Size(262, 180);
             this.obroundIndentControl1.TabIndex = 20;
+            // 
+            // errorProvider1
+            // 
+            this.errorProvider1.ContainerControl = this;
             // 
             // NewTray
             // 
