@@ -32,7 +32,7 @@ namespace InventorProject01
                     }
                 }
 
-                if (gb is GroupBox && indentType_comboBox.SelectedIndex == 3 && (gb.Name == "groupBox1" || gb.Name == "groupBox2"))
+                if (gb is GroupBox && cb_IndentType.SelectedIndex == 3 && (gb.Name == "groupBox1" || gb.Name == "groupBox2"))
                 {
                     foreach (Control tb in gb.Controls)
                     {
@@ -48,7 +48,7 @@ namespace InventorProject01
                     }
                 }
 
-                if (gb is GroupBox && !(indentType_comboBox.SelectedIndex == 3))
+                if (gb is GroupBox && !(cb_IndentType.SelectedIndex == 3))
                 {
                     foreach (Control tb in gb.Controls)
                     {
@@ -85,13 +85,13 @@ namespace InventorProject01
             //MessageBox.Show(Count.ToString() + "/" + allCount.ToString());
             if (Count == allCount)
             {
-                preview_button.Enabled = true;
-                save_button.Enabled = false;
+                btn_Preview.Enabled = true;
+                btn_Save.Enabled = false;
             }
             else
             {
-                preview_button.Enabled = false;
-                save_button.Enabled = false;
+                btn_Preview.Enabled = false;
+                btn_Save.Enabled = false;
             }
         }
 

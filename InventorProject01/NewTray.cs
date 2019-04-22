@@ -73,49 +73,28 @@ namespace InventorProject01
                 }
             }
 
-            trayLength_numericUpDown.Text = "";
-            trayWidth_numericUpDown.Text = "";
-            numericUpDown3.Text = "";
-            numericUpDown2.Text = "";
-            numericUpDown1.Text = "";
-            numericUpDown7.Text = "";
-            numericUpDown6.Text = "";
+            nud_TrayLen.Text = "";
+            nud_TrayWid.Text = "";
+            nud_IndentHei.Text = "";
+            nud_RadBtm.Text = "";
+            nud_RadTop.Text = "";
+            nud_PitchX.Text = "";
+            nud_PitchY.Text = "";
 
-            roundIndentControl1.roundIndentWidth_numericUpDown.Text = "";
-            roundIndentControl1.roundIndentLength_numericUpDown.Text = "";
+            cb_TrayType.SelectedIndex = 0;
+            cb_TrayMat.SelectedIndex = 0;
+            cb_TrayCorner.SelectedIndex = 1;
+            cb_TrayThk.SelectedIndex = 1;
+            cb_TrayHei.SelectedIndex = 2;
+            cb_BarbDim.SelectedIndex = 0;
+            cb_BarbMat.SelectedIndex = 1;
+            cb_BarbType.SelectedIndex = 0;
+            cb_MatrixX.SelectedIndex = 0;
+            cb_MatrixY.SelectedIndex = 0;
 
-            rectangleIndentControl1.numericUpDown5.Text = "";
-            rectangleIndentControl1.numericUpDown4.Text = "";
-            rectangleIndentControl1.numericUpDown3.Text = "";
-            rectangleIndentControl1.numericUpDown2.Text = "";
-            rectangleIndentControl1.numericUpDown1.Text = "";
-
-            obroundIndentControl1.numericUpDown5.Text = "";
-            obroundIndentControl1.numericUpDown3.Text = "";
-            obroundIndentControl1.numericUpDown2.Text = "";
-            obroundIndentControl1.numericUpDown1.Text = "";
-
-            comboBox1.SelectedIndex = 0;
-            comboBox2.SelectedIndex = 0;
-            trayCorner_comboBox.SelectedIndex = 1;
-            trayThickness_comboBox.SelectedIndex = 1;
-            trayHeight_comboBox.SelectedIndex = 2;
-            comboBox7.SelectedIndex = 0;
-            comboBox9.SelectedIndex = 1;
-            comboBox10.SelectedIndex = 0;
-            comboBox3.SelectedIndex = 0;
-            comboBox4.SelectedIndex = 0;
-
-
-            indentType_comboBox.SelectedIndex = 3;
-            rectangleIndentControl1.comboBox1.SelectedIndex = 0;
-            obroundIndentControl1.comboBox1.SelectedIndex = 0;
-
-            roundIndentControl1.Hide();
-            obroundIndentControl1.Hide();
-            rectangleIndentControl1.Hide();
-            preview_button.Enabled = false;
-            save_button.Enabled = false;
+            cb_IndentType.SelectedIndex = 3;
+            btn_Preview.Enabled = false;
+            btn_Save.Enabled = false;
 
             try
             {
@@ -173,15 +152,15 @@ namespace InventorProject01
             inverted1 = work + "BBT # INV 1.ipt";
             inverted2 = work + "BBT # INV 2.ipt";
 
-            if (comboBox1.SelectedIndex == 0)
+            if (cb_TrayType.SelectedIndex == 0)
             {
                 choice = standard;
             }
-            else if (comboBox1.SelectedIndex == 1)
+            else if (cb_TrayType.SelectedIndex == 1)
             {
                 choice = inverted1;
             }
-            else if (comboBox1.SelectedIndex == 2)
+            else if (cb_TrayType.SelectedIndex == 2)
             {
                 choice = inverted2;
             }
@@ -203,20 +182,20 @@ namespace InventorProject01
             //textBox2.Text = oParameters["TLUN"].Expression;
             try
             {
-                oParameters["TLUN"].Expression = trayLength_numericUpDown.Text;
-                oParameters["TLAT"].Expression = trayWidth_numericUpDown.Text;
-                oParameters["TH0"].Expression = trayHeight_comboBox.Text;
-                oParameters["TGM"].Expression = trayThickness_comboBox.Text;
+                oParameters["TLUN"].Expression = nud_TrayLen.Text;
+                oParameters["TLAT"].Expression = nud_TrayWid.Text;
+                oParameters["TH0"].Expression = cb_TrayHei.Text;
+                oParameters["TGM"].Expression = cb_TrayThk.Text;
 
-                if (trayCorner_comboBox.SelectedIndex == 0)
+                if (cb_TrayCorner.SelectedIndex == 0)
                 {
                     oParameters["TRC"].Expression = "16";
                 }
-                else if (trayCorner_comboBox.SelectedIndex == 1)
+                else if (cb_TrayCorner.SelectedIndex == 1)
                 {
                     oParameters["TRC"].Expression = "43.6";
                 }
-                else if (trayCorner_comboBox.SelectedIndex == 2)
+                else if (cb_TrayCorner.SelectedIndex == 2)
                 {
                     oParameters["TRC"].Expression = "69";
                 }
@@ -241,72 +220,60 @@ namespace InventorProject01
         private void button1_Click(object sender, EventArgs e)
         {
             folderBrowserDialog1.ShowDialog();
-            textBox6.Text = folderBrowserDialog1.SelectedPath.ToString();
+            tb_Path.Text = folderBrowserDialog1.SelectedPath.ToString();
         }
 
         //Indent Type Combobox
         private void indentType_comboBox_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (indentType_comboBox.SelectedIndex == 0)
+            if (cb_IndentType.SelectedIndex == 0)
             {
-                roundIndentControl1.Show();
-                obroundIndentControl1.Hide();
-                rectangleIndentControl1.Hide();
-                groupBox4.Show();
-                groupBox5.Show();
-                groupBox6.Show();
-                groupBox7.Show();
-                label17.Show();
-                numericUpDown3.Show();
+                gb_IndentBottom.Show();
+                gb_IndentRadius.Show();
+                gb_IndentMatrix.Show();
+                gb_IndentPitch.Show();
+                lb_IndentHei.Show();
+                nud_IndentHei.Show();
                 ControlGroupBox("groupBox3");
             }
-            else if (indentType_comboBox.SelectedIndex == 1)
+            else if (cb_IndentType.SelectedIndex == 1)
             {
-                obroundIndentControl1.Show();
-                roundIndentControl1.Hide();
-                rectangleIndentControl1.Hide();
-                groupBox4.Show();
-                groupBox5.Show();
-                groupBox6.Show();
-                groupBox7.Show();
-                label17.Show();
-                numericUpDown3.Show();
+                gb_IndentBottom.Show();
+                gb_IndentRadius.Show();
+                gb_IndentMatrix.Show();
+                gb_IndentPitch.Show();
+                lb_IndentHei.Show();
+                nud_IndentHei.Show();
                 ControlGroupBox("groupBox3");
             }
-            else if (indentType_comboBox.SelectedIndex == 2)
+            else if (cb_IndentType.SelectedIndex == 2)
             {
-                rectangleIndentControl1.Show();
-                roundIndentControl1.Hide();
-                obroundIndentControl1.Hide();
-                groupBox4.Show();
-                groupBox5.Show();
-                groupBox6.Show();
-                groupBox7.Show();
-                label17.Show();
-                numericUpDown3.Show();
+                gb_IndentBottom.Show();
+                gb_IndentRadius.Show();
+                gb_IndentMatrix.Show();
+                gb_IndentPitch.Show();
+                lb_IndentHei.Show();
+                nud_IndentHei.Show();
                 ControlGroupBox("groupBox3");
             }
             else
             {
-                roundIndentControl1.Hide();
-                obroundIndentControl1.Hide();
-                rectangleIndentControl1.Hide();
-                groupBox4.Hide();
-                groupBox5.Hide();
-                groupBox6.Hide();
-                groupBox7.Hide();
-                label17.Hide();
-                numericUpDown3.Hide();
+                gb_IndentBottom.Hide();
+                gb_IndentRadius.Hide();
+                gb_IndentMatrix.Hide();
+                gb_IndentPitch.Hide();
+                lb_IndentHei.Hide();
+                nud_IndentHei.Hide();
                 ControlGroupBox("groupBox3");
-                trayWidth_numericUpDown.Focus();
+                nud_TrayWid.Focus();
                 SendKeys.Send("~");
             }
         }
 
         private void ControlGroupBox(string groupBox)
         {
-            preview_button.Enabled = false;
-            save_button.Enabled = false;
+            btn_Preview.Enabled = false;
+            btn_Save.Enabled = false;
 
             foreach (Control gb in Controls)
             {
@@ -362,7 +329,8 @@ namespace InventorProject01
         private void textBox6_MouseClick(object sender, MouseEventArgs e)
         {
             folderBrowserDialog1.ShowDialog();
-            textBox6.Text = folderBrowserDialog1.SelectedPath.ToString();
+            tb_Path.Text = folderBrowserDialog1.SelectedPath.ToString();
         }
+
     }
     }

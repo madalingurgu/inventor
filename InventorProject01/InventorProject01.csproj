@@ -63,26 +63,8 @@
     <Compile Include="NewTray.Designer.cs">
       <DependentUpon>NewTray.cs</DependentUpon>
     </Compile>
-    <Compile Include="ObroundIndentControl.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="ObroundIndentControl.Designer.cs">
-      <DependentUpon>ObroundIndentControl.cs</DependentUpon>
-    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="RectangleIndentControl.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="RectangleIndentControl.Designer.cs">
-      <DependentUpon>RectangleIndentControl.cs</DependentUpon>
-    </Compile>
-    <Compile Include="RoundIndentControl.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="RoundIndentControl.Designer.cs">
-      <DependentUpon>RoundIndentControl.cs</DependentUpon>
-    </Compile>
     <Compile Include="Validation.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -91,9 +73,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="NewTray.resx">
       <DependentUpon>NewTray.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="ObroundIndentControl.resx">
-      <DependentUpon>ObroundIndentControl.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -104,12 +83,6 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="RectangleIndentControl.resx">
-      <DependentUpon>RectangleIndentControl.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="RoundIndentControl.resx">
-      <DependentUpon>RoundIndentControl.cs</DependentUpon>
-    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
