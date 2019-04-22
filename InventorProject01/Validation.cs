@@ -32,7 +32,7 @@ namespace InventorProject01
                     }
                 }
 
-                if (gb is GroupBox && cb_IndentType.SelectedIndex == 3 && (gb.Name == "groupBox1" || gb.Name == "groupBox2"))
+                if (gb is GroupBox && cb_IndentType.SelectedIndex == 3 && (gb.Name == "gb_Tray" || gb.Name == "gb_Barband"))
                 {
                     foreach (Control tb in gb.Controls)
                     {

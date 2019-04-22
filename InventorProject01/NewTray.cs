@@ -75,11 +75,6 @@ namespace InventorProject01
 
             nud_TrayLen.Text = "";
             nud_TrayWid.Text = "";
-            nud_IndentHei.Text = "";
-            nud_RadBtm.Text = "";
-            nud_RadTop.Text = "";
-            nud_PitchX.Text = "";
-            nud_PitchY.Text = "";
 
             cb_TrayType.SelectedIndex = 0;
             cb_TrayMat.SelectedIndex = 0;
@@ -91,8 +86,9 @@ namespace InventorProject01
             cb_BarbType.SelectedIndex = 0;
             cb_MatrixX.SelectedIndex = 0;
             cb_MatrixY.SelectedIndex = 0;
-
             cb_IndentType.SelectedIndex = 3;
+            cb_Orientation.SelectedIndex = 0;
+
             btn_Preview.Enabled = false;
             btn_Save.Enabled = false;
 
@@ -226,45 +222,100 @@ namespace InventorProject01
         //Indent Type Combobox
         private void indentType_comboBox_SelectedIndexChanged(object sender, EventArgs e)
         {
+            //round indent
             if (cb_IndentType.SelectedIndex == 0)
             {
+                gb_IndentTI.Show();
+                gb_IndentBO.Show();
+                nud_IndentLenTI.Show();
+                nud_IndentLenBO.Show();
+                lb_IndentLenTI.Hide();
+                lb_IndentLenBO.Hide();
+                nud_IndentWidTI.Hide();
+                nud_IndentWidBO.Hide();
+                lb_IndentWidTI.Hide();
+                lb_IndentWidBO.Hide();
+
+                lb_Orientation.Hide();
+                cb_Orientation.Hide();
+                lb_IndentCornerRad.Hide();
+                nud_IndentCornerRad.Hide();
+
                 gb_IndentBottom.Show();
                 gb_IndentRadius.Show();
                 gb_IndentMatrix.Show();
                 gb_IndentPitch.Show();
                 lb_IndentHei.Show();
                 nud_IndentHei.Show();
-                ControlGroupBox("groupBox3");
+                ControlGroupBox("gb_Indent");
             }
+            //obround indent
             else if (cb_IndentType.SelectedIndex == 1)
             {
+                gb_IndentTI.Show();
+                gb_IndentBO.Show();
+                nud_IndentLenTI.Show();
+                nud_IndentLenBO.Show();
+                lb_IndentLenTI.Show();
+                lb_IndentLenBO.Show();
+                nud_IndentWidTI.Show();
+                nud_IndentWidBO.Show();
+                lb_IndentWidTI.Show();
+                lb_IndentWidBO.Show();
+                lb_Orientation.Show();
+                cb_Orientation.Show();
+
                 gb_IndentBottom.Show();
                 gb_IndentRadius.Show();
                 gb_IndentMatrix.Show();
                 gb_IndentPitch.Show();
                 lb_IndentHei.Show();
                 nud_IndentHei.Show();
-                ControlGroupBox("groupBox3");
+                ControlGroupBox("gb_Indent");
             }
+            //rectangle indent
             else if (cb_IndentType.SelectedIndex == 2)
             {
+                gb_IndentTI.Show();
+                gb_IndentBO.Show();
+                nud_IndentLenTI.Show();
+                nud_IndentLenBO.Show();
+                lb_IndentLenTI.Show();
+                lb_IndentLenBO.Show();
+                nud_IndentWidTI.Show();
+                nud_IndentWidBO.Show();
+                lb_IndentWidTI.Show();
+                lb_IndentWidBO.Show();
+                lb_Orientation.Show();
+                cb_Orientation.Show();
+                lb_IndentCornerRad.Show();
+                nud_IndentCornerRad.Show();
+
                 gb_IndentBottom.Show();
                 gb_IndentRadius.Show();
                 gb_IndentMatrix.Show();
                 gb_IndentPitch.Show();
                 lb_IndentHei.Show();
                 nud_IndentHei.Show();
-                ControlGroupBox("groupBox3");
+                ControlGroupBox("gb_Indent");
             }
+            //none
             else
             {
+                gb_IndentTI.Hide();
+                gb_IndentBO.Hide();
+                lb_Orientation.Hide();
+                cb_Orientation.Hide();
+                lb_IndentCornerRad.Hide();
+                nud_IndentCornerRad.Hide();
+
                 gb_IndentBottom.Hide();
                 gb_IndentRadius.Hide();
                 gb_IndentMatrix.Hide();
                 gb_IndentPitch.Hide();
                 lb_IndentHei.Hide();
                 nud_IndentHei.Hide();
-                ControlGroupBox("groupBox3");
+                ControlGroupBox("gb_Indent");
                 nud_TrayWid.Focus();
                 SendKeys.Send("~");
             }
