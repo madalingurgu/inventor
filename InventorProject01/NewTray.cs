@@ -44,27 +44,32 @@ namespace InventorProject01
         {
             InitializeComponent();
 
-            foreach (Control tb in Controls)
+            foreach (Control gb in Controls)
             {
-                if (tb is System.Windows.Forms.TextBox)
+                if (gb is System.Windows.Forms.TextBox)
                 {
-                    tb.Leave += new System.EventHandler(myControlText_Leave);
+                    gb.KeyUp += new KeyEventHandler(General_KeyUp);
                 }
-            }
 
-            foreach (Control tb in Controls)
-            {
-                if (tb is System.Windows.Forms.NumericUpDown)
+                if (gb is GroupBox)
                 {
-                    tb.KeyUp += new System.Windows.Forms.KeyEventHandler(myTextBox_KeyUp);
-                }
-            }
-
-            foreach (Control nud in Controls)
-            {
-                if (nud is System.Windows.Forms.NumericUpDown)
-                {
-                    nud.KeyUp += new System.Windows.Forms.KeyEventHandler(myTextBox_KeyUp);
+                    foreach (Control tb in gb.Controls)
+                    {
+                        if (tb is NumericUpDown)
+                        {
+                            tb.KeyUp += new KeyEventHandler(General_KeyUp);
+                        }
+                        if (tb is GroupBox)
+                        {
+                            foreach (Control tbb in tb.Controls)
+                            {
+                                if (tbb is NumericUpDown)
+                                {
+                                    tbb.KeyUp += new KeyEventHandler(General_KeyUp);
+                                }
+                            }
+                        }
+                    }
                 }
             }
 
@@ -253,6 +258,7 @@ namespace InventorProject01
                 groupBox7.Show();
                 label17.Show();
                 numericUpDown3.Show();
+                ControlGroupBox("groupBox3");
             }
             else if (indentType_comboBox.SelectedIndex == 1)
             {
@@ -265,6 +271,7 @@ namespace InventorProject01
                 groupBox7.Show();
                 label17.Show();
                 numericUpDown3.Show();
+                ControlGroupBox("groupBox3");
             }
             else if (indentType_comboBox.SelectedIndex == 2)
             {
@@ -277,6 +284,7 @@ namespace InventorProject01
                 groupBox7.Show();
                 label17.Show();
                 numericUpDown3.Show();
+                ControlGroupBox("groupBox3");
             }
             else
             {
@@ -289,7 +297,41 @@ namespace InventorProject01
                 groupBox7.Hide();
                 label17.Hide();
                 numericUpDown3.Hide();
+                ControlGroupBox("groupBox3");
+                trayWidth_numericUpDown.Focus();
+                SendKeys.Send("~");
             }
+        }
+
+        private void ControlGroupBox(string groupBox)
+        {
+            preview_button.Enabled = false;
+            save_button.Enabled = false;
+
+            foreach (Control gb in Controls)
+            {
+                if (gb is GroupBox && gb.Name == groupBox)
+                {
+                    foreach (Control tb in gb.Controls)
+                    {
+                        if (tb is NumericUpDown)
+                        {
+                            tb.Text = "";
+                        }
+                        if (tb is GroupBox)
+                        {
+                            foreach (Control tbb in tb.Controls)
+                            {
+                                if (tbb is NumericUpDown)
+                                {
+                                    tbb.Text = "";
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
         }
 
         //Save Button

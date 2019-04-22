@@ -87,10 +87,10 @@
             this.label8 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.numericUpDown3 = new System.Windows.Forms.NumericUpDown();
+            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             this.rectangleIndentControl1 = new InventorProject01.RectangleIndentControl();
             this.roundIndentControl1 = new InventorProject01.RoundIndentControl();
             this.obroundIndentControl1 = new InventorProject01.ObroundIndentControl();
-            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.trayWidth_numericUpDown)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.trayLength_numericUpDown)).BeginInit();
@@ -114,7 +114,6 @@
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(55, 20);
             this.textBox1.TabIndex = 0;
-            
             // 
             // label1
             // 
@@ -165,7 +164,7 @@
             0});
             this.trayWidth_numericUpDown.Name = "trayWidth_numericUpDown";
             this.trayWidth_numericUpDown.Size = new System.Drawing.Size(85, 20);
-            this.trayWidth_numericUpDown.TabIndex = 17;
+            this.trayWidth_numericUpDown.TabIndex = 10;
             this.trayWidth_numericUpDown.Value = new decimal(new int[] {
             600,
             0,
@@ -188,7 +187,7 @@
             0});
             this.trayLength_numericUpDown.Name = "trayLength_numericUpDown";
             this.trayLength_numericUpDown.Size = new System.Drawing.Size(85, 20);
-            this.trayLength_numericUpDown.TabIndex = 16;
+            this.trayLength_numericUpDown.TabIndex = 9;
             this.trayLength_numericUpDown.Value = new decimal(new int[] {
             800,
             0,
@@ -225,7 +224,7 @@
             this.trayHeight_comboBox.Location = new System.Drawing.Point(189, 142);
             this.trayHeight_comboBox.Name = "trayHeight_comboBox";
             this.trayHeight_comboBox.Size = new System.Drawing.Size(85, 21);
-            this.trayHeight_comboBox.TabIndex = 9;
+            this.trayHeight_comboBox.TabIndex = 11;
             // 
             // label6
             // 
@@ -247,7 +246,7 @@
             this.trayCorner_comboBox.Location = new System.Drawing.Point(6, 93);
             this.trayCorner_comboBox.Name = "trayCorner_comboBox";
             this.trayCorner_comboBox.Size = new System.Drawing.Size(132, 21);
-            this.trayCorner_comboBox.TabIndex = 7;
+            this.trayCorner_comboBox.TabIndex = 4;
             // 
             // label4
             // 
@@ -313,7 +312,7 @@
             this.comboBox1.Location = new System.Drawing.Point(6, 45);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(131, 21);
-            this.comboBox1.TabIndex = 1;
+            this.comboBox1.TabIndex = 2;
             // 
             // label2
             // 
@@ -350,6 +349,7 @@
             this.textBox5.ReadOnly = true;
             this.textBox5.Size = new System.Drawing.Size(131, 20);
             this.textBox5.TabIndex = 17;
+            this.textBox5.TabStop = false;
             // 
             // label10
             // 
@@ -367,6 +367,7 @@
             this.textBox4.ReadOnly = true;
             this.textBox4.Size = new System.Drawing.Size(131, 20);
             this.textBox4.TabIndex = 15;
+            this.textBox4.TabStop = false;
             // 
             // label9
             // 
@@ -389,7 +390,7 @@
             this.comboBox7.Location = new System.Drawing.Point(6, 93);
             this.comboBox7.Name = "comboBox7";
             this.comboBox7.Size = new System.Drawing.Size(268, 21);
-            this.comboBox7.TabIndex = 7;
+            this.comboBox7.TabIndex = 8;
             // 
             // label12
             // 
@@ -411,7 +412,7 @@
             this.comboBox9.Location = new System.Drawing.Point(143, 45);
             this.comboBox9.Name = "comboBox9";
             this.comboBox9.Size = new System.Drawing.Size(131, 21);
-            this.comboBox9.TabIndex = 3;
+            this.comboBox9.TabIndex = 7;
             // 
             // label14
             // 
@@ -432,7 +433,7 @@
             this.comboBox10.Location = new System.Drawing.Point(6, 45);
             this.comboBox10.Name = "comboBox10";
             this.comboBox10.Size = new System.Drawing.Size(131, 21);
-            this.comboBox10.TabIndex = 1;
+            this.comboBox10.TabIndex = 6;
             // 
             // label15
             // 
@@ -457,7 +458,7 @@
             this.textBox6.Location = new System.Drawing.Point(75, 60);
             this.textBox6.Name = "textBox6";
             this.textBox6.Size = new System.Drawing.Size(333, 20);
-            this.textBox6.TabIndex = 4;
+            this.textBox6.TabIndex = 1;
             this.textBox6.MouseClick += new System.Windows.Forms.MouseEventHandler(this.textBox6_MouseClick);
             // 
             // button1
@@ -466,6 +467,7 @@
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 21);
             this.button1.TabIndex = 6;
+            this.button1.TabStop = false;
             this.button1.Text = "Browse";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
@@ -476,6 +478,7 @@
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(75, 21);
             this.button2.TabIndex = 7;
+            this.button2.TabStop = false;
             this.button2.Text = "Auto";
             this.button2.UseVisualStyleBackColor = true;
             // 
@@ -484,7 +487,7 @@
             this.save_button.Location = new System.Drawing.Point(91, 577);
             this.save_button.Name = "save_button";
             this.save_button.Size = new System.Drawing.Size(75, 23);
-            this.save_button.TabIndex = 8;
+            this.save_button.TabIndex = 201;
             this.save_button.Text = "Save";
             this.save_button.UseVisualStyleBackColor = true;
             this.save_button.Click += new System.EventHandler(this.save_button_Click);
@@ -495,6 +498,7 @@
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(75, 23);
             this.button4.TabIndex = 9;
+            this.button4.TabStop = false;
             this.button4.Text = "Cancel";
             this.button4.UseVisualStyleBackColor = true;
             this.button4.Click += new System.EventHandler(this.cancel_button_Click);
@@ -504,7 +508,7 @@
             this.preview_button.Location = new System.Drawing.Point(10, 577);
             this.preview_button.Name = "preview_button";
             this.preview_button.Size = new System.Drawing.Size(75, 23);
-            this.preview_button.TabIndex = 15;
+            this.preview_button.TabIndex = 200;
             this.preview_button.Text = "Preview";
             this.preview_button.UseVisualStyleBackColor = true;
             this.preview_button.Click += new System.EventHandler(this.preview_button_Click);
@@ -595,7 +599,7 @@
             0});
             this.numericUpDown2.Name = "numericUpDown2";
             this.numericUpDown2.Size = new System.Drawing.Size(55, 20);
-            this.numericUpDown2.TabIndex = 23;
+            this.numericUpDown2.TabIndex = 15;
             this.numericUpDown2.Value = new decimal(new int[] {
             6,
             0,
@@ -618,7 +622,7 @@
             0});
             this.numericUpDown1.Name = "numericUpDown1";
             this.numericUpDown1.Size = new System.Drawing.Size(55, 20);
-            this.numericUpDown1.TabIndex = 22;
+            this.numericUpDown1.TabIndex = 14;
             this.numericUpDown1.Value = new decimal(new int[] {
             6,
             0,
@@ -691,7 +695,7 @@
             0});
             this.numericUpDown6.Name = "numericUpDown6";
             this.numericUpDown6.Size = new System.Drawing.Size(55, 20);
-            this.numericUpDown6.TabIndex = 23;
+            this.numericUpDown6.TabIndex = 19;
             this.numericUpDown6.Value = new decimal(new int[] {
             150,
             0,
@@ -714,7 +718,7 @@
             0});
             this.numericUpDown7.Name = "numericUpDown7";
             this.numericUpDown7.Size = new System.Drawing.Size(55, 20);
-            this.numericUpDown7.TabIndex = 22;
+            this.numericUpDown7.TabIndex = 18;
             this.numericUpDown7.Value = new decimal(new int[] {
             150,
             0,
@@ -775,7 +779,7 @@
             this.comboBox4.Location = new System.Drawing.Point(70, 37);
             this.comboBox4.Name = "comboBox4";
             this.comboBox4.Size = new System.Drawing.Size(50, 21);
-            this.comboBox4.TabIndex = 25;
+            this.comboBox4.TabIndex = 17;
             // 
             // comboBox3
             // 
@@ -800,7 +804,7 @@
             this.comboBox3.Location = new System.Drawing.Point(6, 37);
             this.comboBox3.Name = "comboBox3";
             this.comboBox3.Size = new System.Drawing.Size(50, 21);
-            this.comboBox3.TabIndex = 24;
+            this.comboBox3.TabIndex = 16;
             // 
             // label8
             // 
@@ -836,12 +840,16 @@
             0});
             this.numericUpDown3.Name = "numericUpDown3";
             this.numericUpDown3.Size = new System.Drawing.Size(55, 20);
-            this.numericUpDown3.TabIndex = 22;
+            this.numericUpDown3.TabIndex = 13;
             this.numericUpDown3.Value = new decimal(new int[] {
             20,
             0,
             0,
             0});
+            // 
+            // errorProvider1
+            // 
+            this.errorProvider1.ContainerControl = this;
             // 
             // rectangleIndentControl1
             // 
@@ -863,10 +871,6 @@
             this.obroundIndentControl1.Name = "obroundIndentControl1";
             this.obroundIndentControl1.Size = new System.Drawing.Size(262, 180);
             this.obroundIndentControl1.TabIndex = 20;
-            // 
-            // errorProvider1
-            // 
-            this.errorProvider1.ContainerControl = this;
             // 
             // NewTray
             // 

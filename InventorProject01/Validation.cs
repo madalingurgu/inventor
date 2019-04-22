@@ -15,41 +15,75 @@ namespace InventorProject01
     public partial class NewTray : Form
     {
 
-        public void myControlText_Leave(object sender, EventArgs e)
+        private void General_KeyUp(object sender, KeyEventArgs e)
         {
+            int Count = 0;
+            int allCount = 0;
 
-        }
-
-        private void myTextBox_KeyUp(object sender, KeyEventArgs e)
-        {
-            int TbCount = 0;
-            int allTbCount = 0;
-            int NudCount = 0;
-            int allNudCount = 0;
-
-            foreach (Control tb in Controls)
+            foreach (Control gb in Controls)
             {
-
-                if (tb is System.Windows.Forms.NumericUpDown)
+                if (gb is System.Windows.Forms.TextBox)
                 {
-                    allNudCount++;
-                }
-
-                if (tb is System.Windows.Forms.TextBox)
-                {
-                    allTbCount++;
-                    if (!(tb.Text.Length <= 0))
+                    allCount++;
+                    //MessageBox.Show("Text Box Name = " + gb.Name);
+                    if (gb.Text.Length > 0)
                     {
-                        TbCount++;
+                        Count++;
                     }
                 }
 
+                if (gb is GroupBox && indentType_comboBox.SelectedIndex == 3 && (gb.Name == "groupBox1" || gb.Name == "groupBox2"))
+                {
+                    foreach (Control tb in gb.Controls)
+                    {
+                        if (tb is NumericUpDown)
+                        {
+                            allCount++;
+                            //MessageBox.Show("Numeric Up Down Name = " + tb.Name);
+                            if (tb.Text.Length > 0)
+                            {
+                                Count++;
+                            }
+                        }
+                    }
+                }
 
+                if (gb is GroupBox && !(indentType_comboBox.SelectedIndex == 3))
+                {
+                    foreach (Control tb in gb.Controls)
+                    {
+                        if (tb is NumericUpDown)
+                        {
+                            allCount++;
+                            //MessageBox.Show("Numeric Up Down Name = " + tb.Name);
+                            if (tb.Text.Length > 0)
+                            {
+                                Count++;
+                            }
+                        }
+
+                        if (tb is GroupBox)
+                        {
+                            //MessageBox.Show("Group Box Name = " + tb.Name);
+                            foreach(Control tbb in tb.Controls)
+                            {
+                                //MessageBox.Show("Numeric UpDown Name = " + tbb.Name);
+                                if (tbb is NumericUpDown)
+                                {
+                                    allCount++;
+                                    if (tbb.Text.Length > 0)
+                                    {
+                                        Count++;
+                                    }
+                                }
+                            }
+                        }
+
+                    }
+                }
             }
-
-            MessageBox.Show("Numeric Up Down controls: " + allNudCount);
-
-            if (allTbCount == TbCount)
+            //MessageBox.Show(Count.ToString() + "/" + allCount.ToString());
+            if (Count == allCount)
             {
                 preview_button.Enabled = true;
                 save_button.Enabled = false;
