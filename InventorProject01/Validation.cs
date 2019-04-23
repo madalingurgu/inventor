@@ -47,8 +47,78 @@ namespace InventorProject01
                         }
                     }
                 }
+                //round indent
+                if (gb is GroupBox && cb_IndentType.SelectedIndex == 0)
+                {
+                    foreach (Control tb in gb.Controls)
+                    {
+                        if (tb is NumericUpDown && tb.Name == "nud_IndentHei")
+                        {
+                            allCount++;
+                            //MessageBox.Show("Numeric Up Down Name = " + tb.Name);
+                            if (tb.Text.Length > 0)
+                            {
+                                Count++;
+                            }
+                        }
 
-                if (gb is GroupBox && !(cb_IndentType.SelectedIndex == 3))
+                        if (tb is GroupBox)
+                        {
+                            //MessageBox.Show("Group Box Name = " + tb.Name);
+                            foreach(Control tbb in tb.Controls)
+                            {
+                                //MessageBox.Show("Numeric UpDown Name = " + tbb.Name);
+                                if (tbb is NumericUpDown && !(tbb.Name == "nud_IndentWidTI") && !(tbb.Name == "nud_IndentWidBO"))
+                                {
+                                    allCount++;
+                                    if (tbb.Text.Length > 0)
+                                    {
+                                        Count++;
+                                    }
+                                }
+                            }
+                        }
+
+                    }
+                }
+
+                //obround indent
+                if (gb is GroupBox && cb_IndentType.SelectedIndex == 1)
+                {
+                    foreach (Control tb in gb.Controls)
+                    {
+                        if (tb is NumericUpDown && tb.Name == "nud_IndentHei")
+                        {
+                            allCount++;
+                            //MessageBox.Show("Numeric Up Down Name = " + tb.Name);
+                            if (tb.Text.Length > 0)
+                            {
+                                Count++;
+                            }
+                        }
+
+                        if (tb is GroupBox)
+                        {
+                            //MessageBox.Show("Group Box Name = " + tb.Name);
+                            foreach (Control tbb in tb.Controls)
+                            {
+                                //MessageBox.Show("Numeric UpDown Name = " + tbb.Name);
+                                if (tbb is NumericUpDown)
+                                {
+                                    allCount++;
+                                    if (tbb.Text.Length > 0)
+                                    {
+                                        Count++;
+                                    }
+                                }
+                            }
+                        }
+
+                    }
+                }
+
+                //rectangle indent
+                if (gb is GroupBox && cb_IndentType.SelectedIndex == 2)
                 {
                     foreach (Control tb in gb.Controls)
                     {
@@ -65,7 +135,7 @@ namespace InventorProject01
                         if (tb is GroupBox)
                         {
                             //MessageBox.Show("Group Box Name = " + tb.Name);
-                            foreach(Control tbb in tb.Controls)
+                            foreach (Control tbb in tb.Controls)
                             {
                                 //MessageBox.Show("Numeric UpDown Name = " + tbb.Name);
                                 if (tbb is NumericUpDown)
@@ -81,6 +151,7 @@ namespace InventorProject01
 
                     }
                 }
+
             }
             //MessageBox.Show(Count.ToString() + "/" + allCount.ToString());
             if (Count == allCount)
