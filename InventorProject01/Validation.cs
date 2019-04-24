@@ -14,7 +14,6 @@ namespace InventorProject01
 {
     public partial class NewTray : Form
     {
-
         private void General_KeyUp(object sender, KeyEventArgs e)
         {
             int Count = 0;

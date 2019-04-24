@@ -211,6 +211,7 @@
             0,
             0,
             0});
+            this.nud_TrayLen.Leave += new System.EventHandler(this.nud_TrayLen_Leave);
             // 
             // lb_TrayWid
             // 
@@ -1085,7 +1086,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(584, 611);
+            this.ClientSize = new System.Drawing.Size(584, 612);
             this.Controls.Add(this.btn_Preview);
             this.Controls.Add(this.gb_Indent);
             this.Controls.Add(this.btn_Cancel);

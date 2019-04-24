@@ -195,9 +195,26 @@ namespace InventorProject01
                 {
                     oParameters["TRC"].Expression = "69";
                 }
-                else
+
+                if (cb_BarbDim.SelectedIndex == 0)
                 {
-                    //oParameters["TRC"].Expression = "43.6";
+                    oParameters["BH0"].Expression = "15.9";
+                    oParameters["BGM"].Expression = "4.8";
+                }
+                else if (cb_BarbDim.SelectedIndex == 1)
+                {
+                    oParameters["BH0"].Expression = "15.9";
+                    oParameters["BGM"].Expression = "3.8";
+                }
+                else if (cb_BarbDim.SelectedIndex == 2)
+                {
+                    oParameters["BH0"].Expression = "14.8";
+                    oParameters["BGM"].Expression = "4.8";
+                }
+                else if (cb_BarbDim.SelectedIndex == 3)
+                {
+                    oParameters["BH0"].Expression = "12.7";
+                    oParameters["BGM"].Expression = "4.8";
                 }
             }
             catch (Exception ex)
@@ -361,6 +378,7 @@ namespace InventorProject01
         //Preview Button
         private void preview_button_Click(object sender, EventArgs e)
         {
+
             NewDoc();
 
             TrayParameters();
@@ -368,13 +386,17 @@ namespace InventorProject01
             PlaneVisibilityOff(oPartDoc, WorkFeatureTypes.Planes, false);
 
             oPartDoc.Update();
+            oPartDoc.ComponentDefinition.SetEndOfPartToTopOrBottom(false);
+            
             _invApp.ActiveView.GoHome();
         }
 
         //Cancel Button
         private void cancel_button_Click(object sender, EventArgs e)
         {
-            
+            //test for edit
+            //TrayParameters();
+            //oPartDoc.Update();
         }
         //Select path on click
         private void textBox6_MouseClick(object sender, MouseEventArgs e)
@@ -383,5 +405,9 @@ namespace InventorProject01
             tb_Path.Text = folderBrowserDialog1.SelectedPath.ToString();
         }
 
+        private void nud_TrayLen_Leave(object sender, EventArgs e)
+        {
+
+        }
     }
     }
